@@ -38,5 +38,6 @@ Should an individual fail to follow the conduct guidelines described in this Agr
 The work on the Product is performed under the MIT license. Any changes or revision of the type of license will require agreement by all individuals in the Organization.
 
 ##11. Acceptance of Terms
-The individuals Brandon Haynes, Cheyna Humphries, David Hoffit, J Christie, and Matthew Brown accept these terms as participants of the organization. These rules have been distributed through Slack and all members have either acknowledged receipt or have proposed changes prior to working on the Product. This Agreement is also found as agreement_my_dog_spot.md in the Product repository github.com/My-Dog-Spot/happy puppy and working on the Product is acceptance of these terms.  
+The individuals Brandon Haynes, Cheyna Humphries, David Hoffit, J Christie, and Matthew Brown accept these terms as participants of the organization. These rules have been distributed through Slack and all members have either acknowledged receipt or have proposed changes prior to working on the Product. This Agreement is also found as agreement_my_dog_spot.md in the Product repository github.com/My-Dog-Spot/happy puppy and working on the Product is acceptance of these terms.
 
+Brandon Haynes accepts these terms.
