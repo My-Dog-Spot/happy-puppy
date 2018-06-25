@@ -40,8 +40,9 @@ The work on the Product is performed under the MIT license. Any changes or revis
 ##11. Acceptance of Terms
 The individuals Brandon Haynes, Cheyna Humphries, David Hoffit, J Christie, and Matthew Brown accept these terms as participants of the organization. These rules have been distributed through Slack and all members have either acknowledged receipt or have proposed changes prior to working on the Product. This Agreement is also found as agreement_my_dog_spot.md in the Product repository github.com/My-Dog-Spot/happy puppy and working on the Product is acceptance of these terms.
 
+
   Brandon Haynes accepts these terms.
   J Christie has agreed to the Agreement
   Cheyna Humphries accepts these terms.
   David Hull accepts these terms.
-  Matthew Brown accepts these terms .
+  Matthew Brown accepts these terms.
