@@ -1,5 +1,9 @@
 
 #Collaborative Agreement
+Brandon Haynes accepts these terms.
+J Christie has agreed to the Agreement
+Cheyna Humphries accepts these terms.
+David Hull accepts these terms.
 
 ##1. Purpose of the Agreement:
 Brandon Haynes, Cheyna Humphries, David Hoffit, J Christie, and Matthew Brown have created the organization My Dog Spot(github.com/My-Dog-Spot)(also referred to as the "Organization") to work together to create a website held in the repository github.com/My-Dog-Spot/happy puppy(also referred to as the "Product"). This Agreement describes the Organization's understandings of and commitments to the collaborative work needed to generate the Product. 
@@ -40,6 +44,3 @@ The work on the Product is performed under the MIT license. Any changes or revis
 ##11. Acceptance of Terms
 The individuals Brandon Haynes, Cheyna Humphries, David Hoffit, J Christie, and Matthew Brown accept these terms as participants of the organization. These rules have been distributed through Slack and all members have either acknowledged receipt or have proposed changes prior to working on the Product. This Agreement is also found as agreement_my_dog_spot.md in the Product repository github.com/My-Dog-Spot/happy puppy and working on the Product is acceptance of these terms.
 
-Brandon Haynes accepts these terms.
-Cheyna Humphries accepts these terms.
-David Hull accepts these terms.
