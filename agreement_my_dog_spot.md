@@ -42,3 +42,4 @@ The individuals Brandon Haynes, Cheyna Humphries, David Hoffit, J Christie, and 
 
 Brandon Haynes accepts these terms.
 Cheyna Humphries accepts these terms.
+David Hull accepts these terms.
