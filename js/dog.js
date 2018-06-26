@@ -12,8 +12,21 @@ var localStorageDogKey = 'happy-puppy-dog-storage';
 /**
  * Product Object with constructor and methods.
  */
-function Dog() {
+function Dog(birthdate, name, story, portrait, gender) {
   this.id = id();
+  this.birthdate = birthdate;
+  this.name = name;
+  this.story = story;
+  // TODO - add in medical records (stretch goal)
+  this.portrait = portrait;
+  this.gender = gender;
+  this.owner = owner;
+}
+
+function Person(name, organization, dog) {
+  this.name = name;
+  this.organization = organization;
+  this.dog = dog;
 }
 
 /**
@@ -38,6 +51,9 @@ function initializeDogSet() {
   dog.push(new Dog());
   dog.push(new Dog());
 }
+
+// initialize person instances
+function 
 
 
 
