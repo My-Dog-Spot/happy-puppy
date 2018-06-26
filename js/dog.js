@@ -6,6 +6,8 @@
 // A set of dog instances.
 var dog = [];
 
+var person = [];
+
 // The local storage dog key
 var localStorageDogKey = 'happy-puppy-dog-storage';
 
@@ -25,12 +27,21 @@ function Dog(birthdate, name, story, portrait, gender) {
   this.owner = owner;
 }
 
-function Person(name, organization, dog) {
+// associated with the Dog object to reserve dogs
+function Person() {
   var reserveDog = Dog();
-  this.name = name;
-  this.organization = organization;
-  this.dog = dog;
 }
+
+// personal info of customers
+function PersonalInfo(firstName, middleName, lastName, namePrefix, nameSuffix) {
+  this.firstName = firstName;
+  this.middleName = middleName;
+  this.lastName = lastName;
+  this.namePrefix = namePrefix;
+  this.nameSuffix = nameSuffix;
+}
+
+
 
 /**
  * This is from https://gist.github.com/gordonbrander/2230317
@@ -42,6 +53,7 @@ var id = function () {
   // after the decimal.
   return '_' + Math.random().toString(36).substr(2, 9);
 };
+
 
 /**
  * Convenience method to initialize dog array with instances.
@@ -56,8 +68,7 @@ function initializeDogSet() {
 }
 
 // initialize person instances
-function 
-
+new
 
 
 /**
