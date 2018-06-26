@@ -13,7 +13,7 @@ function DogDataConstructor(dogID) {
   this.dogID = dogID;
 }
 
-// Find a <table> element with id="myTable":
+//Adding table to HTML
 var table = document.getElementById('dogTable');
 
 // Create an empty <tr> element and add it to the 1st position of the table:
@@ -24,10 +24,16 @@ var cell1 = row.insertCell(0);
 var cell2 = row.insertCell(1);
 
 // Add some text to the new cells:
-cell1.innerHTML = 'NEW CELL1';
-cell2.innerHTML = 'NEW CELL2';
+cell1.innerHTML = 'DOG1';
+cell2.innerHTML = 'Test row/column';
+// need logic for auto generating new table based on the data set
 
 
+// Form for creating data with  Name, gender, DOB, story, img(fileupload)
+  // Name field is a string
+  // Gender is Boolean(? two options, male female)
+  // Story is a text/string field
+  // Img is an uploadable file
 
 // Table will need an expansive field to input "string" value.
 // Drop down for number of pups
