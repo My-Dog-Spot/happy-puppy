@@ -57,3 +57,4 @@ function loadResultsFromStorage() {
 initializeDogSet();
 
 saveResultsToLocalStorage();
+saveResultsToLocalStorage();
