@@ -9,6 +9,8 @@ var dog = [];
 // The local storage dog key
 var localStorageDogKey = 'happy-puppy-dog-storage';
 
+// reserving from the Dog constructor
+
 /**
  * Product Object with constructor and methods.
  */
@@ -24,6 +26,7 @@ function Dog(birthdate, name, story, portrait, gender) {
 }
 
 function Person(name, organization, dog) {
+  var reserveDog = Dog();
   this.name = name;
   this.organization = organization;
   this.dog = dog;
