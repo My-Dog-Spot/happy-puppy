@@ -5,35 +5,32 @@ var dogTestArray= [];
 // var formElement = document.getElementById('form-insert');
 
 //constructor taking form submit data and adding to array
-function ArrayDogConstructor(name, dob){
+function ArrayDogConstructor(name, dob, story, img, gender){
   this.name = name;
   this.dob = dob;
+  this.story = story;
+  this.img = img;
+  this.gender = gender || 'unspecified';
   dogTestArray.push(this);
 
 }
-new ArrayDogConstructor('JimBoi');
-new ArrayDogConstructor('dogs');
-// console.log('Array: ' + dogTestArray);
 
-// var submitCheck = document.forms['form1', 'form2'].submit();
-// console.log('Saved data? ', submitCheck);
-
-// submitForms = function(){
-//   new ArrayDogConstructor(document.forms['form1', 'form2'].submit());
-// };
-
-//creating initial add button that when pushed starts form functionality
-// var formCallButton =
 console.log(dogTestArray);
 
 var createDogFromFormInput = function(event) {
   event.preventDefault();
-  // console.log(event.target.button);    
+  // console.log(event.target.button);   
   var nameSubmitInput = event.target.querySelectorAll('[name=pname]')[0].value;
-  // console.log(nameSubmitInput);
-  // add from submission check to assign constructor.
+
   var bdaySubmitInput = event.target.querySelectorAll('[name=bday]')[0].value;
-  new ArrayDogConstructor(nameSubmitInput, bdaySubmitInput);
+
+  var genderSubmitInput = event.target.querySelector('input[name="answer"]:checked').value;
+
+  var storySubmitText = event.target.querySelector('textarea[name="story-text"]').value;
+
+  var imgSubmitInput = '';
+
+  new ArrayDogConstructor(nameSubmitInput, bdaySubmitInput, storySubmitText, imgSubmitInput, genderSubmitInput);
   console.log(dogTestArray);
 };
 
@@ -44,3 +41,6 @@ document.getElementById('form-insert').addEventListener('submit', createDogFromF
 
   // create form on the "form-insert" id
   // form should create 1 form field and then build other parts of the field
+
+// Remove is the opposite of appendchild. Used unique ID to 
+// document .getElementById("myTable").deleteRow(0)

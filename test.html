@@ -16,13 +16,29 @@
         
         <form id="form-insert">
 
-            <!-- Name  -->
-           <label for="pname">Pup name:</label> <input id="name-input" type="text" name="pname"  required>
+          <!-- Name  -->
+          <label for="pname"> Pup name: </label> 
+          <input id="name-input" type="text" name="pname"  required>
+          
+          
+          <!-- DOB -->
+          <label for="bday">Birthday: </label> 
+          <input id="dob-input" type="date" name="bday" required>
         
-            <!-- DOB -->
-            <label for="bday">Birthday:</label> <input id="dob-input" type="date" name="bday" required>
+          <!-- Gender -->
+          <fieldset> 
+            <legend>Gender: </legend> 
+            <input id="male" name="answer" type="radio" value="Male" /> <label for="male"> Male </label>
+            <input id="female" name="answer" type="radio" value="Female" /> <label for="female"> Female </label>
+          </fieldset>
 
-            <button id="button" type="submit" form="form-insert"> Submit </button>
+          <!-- Story input field -->
+          <label for="story-text"> Dog Story: </label>
+          <textarea name="story-text"  rows=3 cols=30 ></textarea>
+          
+          <!-- Submit Button -->
+          <button id="button" type="submit" form="form-insert"> Submit </button>
+          
         </form>
 
  <!-- Submit button -->
