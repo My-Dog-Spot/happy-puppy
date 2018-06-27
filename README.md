@@ -44,3 +44,8 @@ https://pixabay.com/en/cairn-terriers-dog-puppy-492040/
 
 cairn-terriers_hero
 https://pixabay.com/en/cairn-terriers-dog-puppy-492036/
+
+
+GitHub permissions 
+https://github.com/logos
+
