@@ -44,3 +44,7 @@ https://pixabay.com/en/cairn-terriers-dog-puppy-492040/
 
 cairn-terriers_hero
 https://pixabay.com/en/cairn-terriers-dog-puppy-492036/
+
+3scottish_terriers_400x246.jpg
+3scottish_terriers_800x493.jpg
+By Walescot [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File:3scottish_terriers.jpg">from Wikimedia Commons</a>
