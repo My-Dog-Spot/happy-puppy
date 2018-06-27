@@ -6,18 +6,18 @@
 // A set of dog instances.
 var dog = [];
 
+// A set of person instances
 var person = [];
 
 // The local storage dog key
 var localStorageDogKey = 'happy-puppy-dog-storage';
-var localStoragePerson = 'happy-puppy-person-storage';
 
 // reserving from the Dog constructor
 
 /**
  * Product Object with constructor and methods.
  */
-function Dog(birthdate, name, story, portrait, gender, owner) {
+function Dog(birthdate, name, story, portrait, gender) {
   this.id = id();
   this.birthdate = birthdate;
   this.name = name;
@@ -25,7 +25,6 @@ function Dog(birthdate, name, story, portrait, gender, owner) {
   // TODO - add in medical records (stretch goal)
   this.portrait = portrait;
   this.gender = gender;
-  this.owner = owner;
   this.potentialOwner;
 }
 
@@ -36,6 +35,7 @@ Dog.prototype.setPotentialOwner = function(potentialOwner) {
 
 // personal info of customers
 function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
+  this.id = id();
   this.firstName = firstName;
   this.middleName = middleName;
   this.lastName = lastName;
@@ -48,7 +48,7 @@ function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
 // reserving dogs
 Person.prototype.reserveDog = function(chosenDog) {
   this.reservedDog.push(chosenDog);
-  chosenDog.setPotentialOwner(this);
+  chosenDog.setPotentialOwner(this.id);
 };
 
 
@@ -68,12 +68,12 @@ var id = function () {
  * Convenience method to initialize dog array with instances.
  */
 function initializeDogSet() {
-  dog.push(new Dog());
-  dog.push(new Dog());
-  dog.push(new Dog());
-  dog.push(new Dog());
-  dog.push(new Dog());
-  dog.push(new Dog());
+  dog.push(new Dog('05/19/2018', 'Shrek', 'Like his namesake, he is a confident and independent, though not very green!', 'img/can-u-beat-my-adorability-score.png', 'male'));
+  dog.push(new Dog('05/19/2018', 'Donkey', 'This one is happy, energetic, and always playful. "Man, it\'s good to be free!"', 'img/powtee-scowtee.png', 'male'));
+  dog.push(new Dog('05/19/2018', 'Princess Fiona', 'She is a proper princess! She\'s a little standoffish, and a little unsure about her brothers. "It talks!"', 'img/we-need-some-time-apart.png', 'female'));
+  dog.push(new Dog('03/01/2018', 'Hannah', 'Oh boy! She is loud and in charge! Always alert and active. "What do you mean, you don\'t know?"', 'img/cairn-terriers-hero.jpg', 'female'));
+  dog.push(new Dog('03/01/2018', 'Bo Peep', 'Gentle, sensitive, and nuturing towards her siblings, a lovely and sweet pup. "Potato Head!"', 'img/cairn-terriers-3.jpg', 'female'));
+  dog.push(new Dog('03/01/2018', 'Mrs Davis', 'An old soul, wise beyond her weeks. "humph"', 'img/cairn-terriers-12.jpg', 'female'));
 }
 
 // initialize person instances
