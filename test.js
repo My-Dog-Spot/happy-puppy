@@ -8,9 +8,9 @@ var dogTestArray= [];
 function ArrayDogConstructor(name, dob, story, img, gender){
   this.name = name;
   this.dob = dob;
-  this.story = story;
-  this.img = img;
-  this.gender = gender || 'unspecified';
+  this.story = story || '';
+  this.img = img || '';
+  this.gender = gender;
   dogTestArray.push(this);
 
 }
