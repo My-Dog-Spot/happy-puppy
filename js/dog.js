@@ -1,6 +1,6 @@
 'use strict';
 /**
- * TO
+ * TODO
  */
 
 // A set of dog instances.
@@ -10,14 +10,11 @@ var dog = [];
 var featDogs = [];
 
 // A set of person instances
-var person = [];
+var personArray = [];
 
 // The local storage dog key
 var localStorageDogKey = 'happy-puppy-dog-storage';
-
 var localStorageFeatDogKey = 'happy-puppy-featured-dogs';
-
-// reserving from the Dog constructor
 
 /**
  * Product Object with constructor and methods.
@@ -37,7 +34,6 @@ Dog.prototype.setPotentialOwner = function(potentialOwner) {
   this.potentialOwner = potentialOwner;
 };
 
-
 // personal info of customers
 function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
   this.id = id();
@@ -49,13 +45,11 @@ function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
   this.reservedDog = [];
 }
 
-
 // reserving dogs
 Person.prototype.reserveDog = function(chosenDog) {
   this.reservedDog.push(chosenDog);
   chosenDog.setPotentialOwner(this.id);
 };
-
 
 /**
  * This is from https://gist.github.com/gordonbrander/2230317
@@ -67,7 +61,6 @@ var id = function () {
   // after the decimal.
   return '_' + Math.random().toString(36).substr(2, 9);
 };
-
 
 /**
  * Convenience method to initialize dog array with instances.
@@ -99,23 +92,24 @@ function initializeFeaturedDogs() {
 
 // initialize person instances
 function initializePersons() {
-  var customer = new Person();
+  var customer = new Person('Jed', 'I', 'Knight', null, null);
   customer.reserveDog(dog[0]);
-  person.push(customer);
+  personArray.push(customer);
 
+  customer = new Person('Bud', null, 'Light', null, null);
   customer.reserveDog(dog[1]);
-  person.push(customer);
+  personArray.push(customer);
 
+  customer = new Person('Chris', 'P', 'Bacon', null, null);
   customer.reserveDog(dog[2]);
-  person.push(customer);
+  personArray.push(customer);
 }
-
 
 /**
  * Use the browsers HTML 5 local storage capability to save or load the users dog data.
  * This is a 201 hack since we're not yet able to persist to back end.
  */
-function saveDogResultsToLocalStorage() {
+function saveDogsToLocalStorage() {
   localStorage.setItem(localStorageDogKey, JSON.stringify(dog));
   localStorage.setItem(localStorageFeatDogKey, JSON.stringify(featDogs));
 }
@@ -123,19 +117,10 @@ function saveDogResultsToLocalStorage() {
 function loadResultsFromStorage() {
   dog = JSON.parse(localStorage.getItem(localStorageDogKey));
 }
-// --------------------------------------------------------------------------------
-// function savePersonResultsToLocalStorage() {
-//   localStorage.setItem(localStoragePerson, JSON.stringify(person));
-// }
 
-// function loadResultsFromStorage() {
-//   person = JSON.parse(localStorage.getItem(localStoragePerson));
-// }
-
-//Instantiate product objects
+//Initialize instances for development sake.
 initializeDogSet();
 initializeFeaturedDogs();
 initializePersons();
 
-saveDogResultsToLocalStorage();
-// savePersonResultsToLocalStorage();
+saveDogsToLocalStorage();
