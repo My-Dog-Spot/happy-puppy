@@ -1,3 +1,5 @@
+'use strict';
+
 /* Build: Breeder Form to HTML */
 
 // The idea here is to create an interactive form with multiple fields that can be populated with dog info
@@ -33,7 +35,7 @@ cell2.innerHTML = 'Test row/column';
   // Name field is a string
   // Gender is Boolean(? two options, male female)
   // Story is a text/string field
-  // Img is an uploadable file
+
 
 // Table will need an expansive field to input "string" value.
 // Drop down for number of pups
@@ -43,3 +45,5 @@ cell2.innerHTML = 'Test row/column';
 // remove field button
 
 // Attach table to HTML!!!!!!!!!!!!!!!!!!
+
+// Stringafy data into JSON for local data storage
