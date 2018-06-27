@@ -7,7 +7,10 @@
 
 body {
   background-color: rgb(222,213,196);
+  width: 1020px;
+  position: relative;
   margin: 0px auto;
+  
 }
 
 .brand-logo {
@@ -17,17 +20,18 @@ body {
 nav {
   background-color: rgb(107, 81, 91);
   position: fixed;
-
+  /* margin: 0px auto; */
+  width: 1020px;
   z-index: 3;
   height: 125px;
   top: 0;
-  /* left: 0px; */
+  
 }
 
 nav ul {
   margin: 0px auto;
   margin-bottom: 15px;
-  width: 1020px;
+  width: 960px;
 }
 
 nav li {
@@ -60,7 +64,7 @@ footer {
   background-color: rgb(107, 81, 91);
   color: rgb(237, 198, 131);
   text-align: center;
-  height: 400px;
+  height: 200px;
   margin-top: 30px;
   width: 1020px;
   margin: 0px auto;
@@ -109,10 +113,11 @@ footer a {
 }
 
  footer div {
-   float: left;
+   /* float: left; */
    width: 400px; 
    height: 200px;
    margin: 0;
+   text-align: left;
  }
 
 .left-content-panel {
@@ -136,6 +141,10 @@ h2 {
   padding-top: 30px;
   padding-left: 15px;
   
+}
+
+h6 {
+  font-size: 8px;
 }
 
 p {
