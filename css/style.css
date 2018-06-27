@@ -7,6 +7,7 @@
 
 body {
   background-color: rgb(222,213,196);
+  margin: 0px auto;
 }
 
 .brand-logo {
@@ -16,6 +17,7 @@ body {
 nav {
   background-color: rgb(107, 81, 91);
   position: fixed;
+
   z-index: 3;
   height: 125px;
   top: 0;
