@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+
+<html>
+
+  <head>
+    <title>Table and Form</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+      <h1>Building form creation function</h1>
+      <main>
+     
+        
+        <form id="form-insert">
+
+          <!-- Name  -->
+          <label for="pname"> Pup name: </label> 
+          <input id="name-input" type="text" name="pname"  required>
+          
+          
+          <!-- DOB -->
+          <label for="bday">Birthday: </label> 
+          <input id="dob-input" type="date" name="bday" required>
+        
+          <!-- Gender -->
+          <fieldset> 
+            <legend>Gender: </legend> 
+            <input id="male" name="answer" type="radio" value="Male" checked="true" /> <label for="male"> Male </label>
+            <input id="female" name="answer" type="radio" value="Female" /> <label for="female"> Female </label>
+          </fieldset>
+
+          <!-- Story input field -->
+          <label for="story-text"> Dog Story: </label>
+          <textarea name="story-text"  rows=3 cols=30 ></textarea>
+          
+          <!-- Submit Button -->
+          <button id="button" type="submit" form="form-insert"> Submit </button>
+          
+        </form>
+
+ <!-- Submit button -->
+
+      </main>
+
+      <footer> </footer>
+    
+      <script src="test.js"></script>
+      <!-- <script src="js/app.js"></script>
+      <script src="js/breeder.js"></script> -->
+  </body>
+</html>
