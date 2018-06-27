@@ -10,7 +10,7 @@ body {
 }
 
 .brand-logo {
-  margin: 10px 0px;
+  margin: 10px 10px;
 }
 
 nav {
@@ -19,7 +19,7 @@ nav {
   z-index: 3;
   height: 125px;
   top: 0;
-  left: 0px;
+  /* left: 0px; */
 }
 
 nav ul {
@@ -94,9 +94,16 @@ footer ul {
   width: 200px;
   padding: 20px;
 }
+
 footer li {
   padding-bottom: 14px;
+}
+
+footer a {
+  padding-bottom: 14px;
+  text-decoration: none;
   color: rgb(237, 198, 131);
+  
 }
 
  footer div {
