@@ -170,3 +170,18 @@ p {
 button:hover {
   background-color: #fff;
 }
+
+th {
+  padding: 2.5px;
+}
+
+td {
+  font-family: 'Helvetica', sans-serif;
+  color:blue;
+  font-size: small;
+  padding: 1px 5px 1px 15px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
