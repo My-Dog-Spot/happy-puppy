@@ -86,7 +86,7 @@ function initializeFeaturedDogs() {
   // generate random number based on index of dog set
   var randomIndexOne = Math.floor(Math.random() * dog.length);
   // push dog at that index into featured dogs
-  featDogs.push(dog[randomIndexOne]);
+  featDogs.push(randomIndexOne);
   // generate random number based on index of dog set
   var randomIndexTwo = Math.floor(Math.random() * dog.length);
   // ensure there are no repeat selections
@@ -94,7 +94,7 @@ function initializeFeaturedDogs() {
     randomIndexTwo = Math.floor(Math.random() * dog.length);
   }
   // push dog at that index into featured dogs
-  featDogs.push(dog[randomIndexTwo]);
+  featDogs.push(randomIndexTwo);
 }
 
 // initialize person instances
