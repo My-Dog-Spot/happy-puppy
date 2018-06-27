@@ -8,7 +8,7 @@ var currentDogObject = new Dog();
 // store table element in global variable
 var whelpingTableEl = document.getElementById('whelping-box-table');
 
-var whelpingDogArray = JSON.parse(localStorage.getItem('happy-puppy-dog-storage'));
+var whelpingDogArray = JSON.parse(localStorage.getItem(localStorageDogKey));
 
 var dogPropertiesHeader = ['birthdate', 'name', 'story', 'portrait', 'gender', 'owner'];
 
