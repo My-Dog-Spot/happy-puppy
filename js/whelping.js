@@ -2,15 +2,29 @@
 
 // TODO: image display
 // TODO: link to application page (listener)
+// TODO: Get headings to proper case
+// TODO: Don't display id nor portential owner
 
+var tableLinkRef = 'application.html';
+
+// adjust image size, keeping ratio
+var imageScale = 4;
+
+var tableImageWidth = 40 * imageScale;
+
+var tableImageHeight = 30 * imageScale;
+
+// instantiate a sample Dog object for use in renderWhelpingHeaderRow and renderWhelpingBodyRow
 var currentDogObject = new Dog();
+
+// store the various keys from the Dog object for use as headings
+var dogPropertiesArrayForHeader = ['Portrait', 'Name', 'Birthdate', 'Gender', 'Story'];
+
+// retrieve the dogs stored in localSorage
+var whelpingDogArray = JSON.parse(localStorage.getItem(localStorageDogKey));
 
 // store table element in global variable
 var whelpingTableEl = document.getElementById('whelping-box-table');
-
-var whelpingDogArray = JSON.parse(localStorage.getItem('happy-puppy-dog-storage'));
-
-var dogPropertiesHeader = ['birthdate', 'name', 'story', 'portrait', 'gender', 'owner'];
 
 // renders the header row for the table
 function renderWhelpingHeaderRow() {
@@ -21,16 +35,12 @@ function renderWhelpingHeaderRow() {
   // tr2 - append table row element to table element
   whelpingTableEl.appendChild(headerRow);
 
-  // create blank table data element to occupy top left cell of table
-  var blankCell = document.createElement('th');
-  headerRow.appendChild(blankCell);
-
   // create headers and append to the header row
-  for(var i = 0; i < dogPropertiesHeader.length; i++) {
+  for(var i = 0; i < dogPropertiesArrayForHeader.length; i++) {
     // th1 - create table heading element
     var headingEl = document.createElement('th');
     // th2 - label the headings
-    headingEl.textContent = dogPropertiesHeader[i];
+    headingEl.textContent = dogPropertiesArrayForHeader[i];
     // th3 - append to the DOM
     headerRow.appendChild(headingEl);
   }
@@ -45,22 +55,57 @@ function renderWhelpingBodyRow(dogObject) {
   // tr1 - create table row element for table
   var bodyRow = document.createElement('tr');
 
-  // append a row heading to the start of the row
-  var rowHeading = document.createElement('th');
-  rowHeading.textContent = currentDogObject.id;
-  bodyRow.appendChild(rowHeading);
-
   // tr2 - append table row element to table element
   whelpingTableEl.appendChild(bodyRow);
 
   // loop through the object's properties and append each one's value to the row
-  for(var i = 0; i < dogPropertiesHeader; i++) {
+  for(var i = 0; i < dogPropertiesArrayForHeader.length; i++) {
+    var currentProperty = dogPropertiesArrayForHeader[i].toLowerCase();
+
     // th1 - create table data element
     var rowDataEl = document.createElement('td');
-    // th2 - insert the data
-    rowDataEl.textContent = i;
-    // th3 - append to the DOM
-    bodyRow.appendChild(rowDataEl);
+
+    // if this element is a portrait or a name, make it a link
+    if(currentProperty === 'portrait' ||
+    currentProperty === 'name') {
+      
+      // anchorEl1 - create anchor data element
+      var anchorEl = document.createElement('a');
+      
+      anchorEl.href = tableLinkRef;
+      if(currentProperty === 'name') {
+        // anchorEl2 - fill the anchor tag's href with the link data
+        anchorEl.textContent = currentDogObject[currentProperty];
+      }
+     
+      // anchorEl3 - append to the row
+      rowDataEl.appendChild(anchorEl);
+      
+      // if this element is a portrait, make it display
+      if(currentProperty === 'portrait') {
+        // handle portrait
+        // imageEl1 - create anchor data element
+        var imageEl = document.createElement('img');
+        // imageEl2 - fill the img tag's src reference with the correct data
+        imageEl.src = currentDogObject.portrait;
+        imageEl.width = tableImageWidth;
+        imageEl.height = tableImageHeight;
+        // imageEl3 - append to the anchor
+        anchorEl.appendChild(imageEl);
+        console.log(rowDataEl);
+      }
+    
+      // th3 - append to the DOM
+      bodyRow.appendChild(rowDataEl);
+
+      // otherwise, insert usual data
+    } else {
+
+      // th2 - insert the data
+      rowDataEl.textContent = currentDogObject[currentProperty];
+      // th3 - append to the DOM
+      bodyRow.appendChild(rowDataEl);
+    }
   }
 }
 
