@@ -6,11 +6,16 @@
 // A set of dog instances.
 var dog = [];
 
+// A set of featured dogs.
+var featDogs = [];
+
 // A set of person instances
 var person = [];
 
 // The local storage dog key
 var localStorageDogKey = 'happy-puppy-dog-storage';
+
+var localStorageFeatDogKey = 'happy-puppy-featured-dogs';
 
 // reserving from the Dog constructor
 
@@ -77,6 +82,21 @@ function initializeDogSet() {
   dog.push(new Dog('img/cairn-terriers-12.jpg', 'Mrs Davis', '03/01/2018', 'female', 'An old soul, wise beyond her weeks. "humph"'));
 }
 
+function initializeFeaturedDogs() {
+  // generate random number based on index of dog set
+  var randomIndexOne = Math.floor(Math.random() * dog.length);
+  // push dog at that index into featured dogs
+  featDogs.push(randomIndexOne);
+  // generate random number based on index of dog set
+  var randomIndexTwo = Math.floor(Math.random() * dog.length);
+  // ensure there are no repeat selections
+  while(randomIndexOne === randomIndexTwo) {
+    randomIndexTwo = Math.floor(Math.random() * dog.length);
+  }
+  // push dog at that index into featured dogs
+  featDogs.push(randomIndexTwo);
+}
+
 // initialize person instances
 function initializePersons() {
   var customer = new Person();
@@ -97,6 +117,7 @@ function initializePersons() {
  */
 function saveDogResultsToLocalStorage() {
   localStorage.setItem(localStorageDogKey, JSON.stringify(dog));
+  localStorage.setItem(localStorageFeatDogKey, JSON.stringify(featDogs));
 }
 
 function loadResultsFromStorage() {
@@ -113,6 +134,7 @@ function loadResultsFromStorage() {
 
 //Instantiate product objects
 initializeDogSet();
+initializeFeaturedDogs();
 initializePersons();
 
 saveDogResultsToLocalStorage();
