@@ -12,9 +12,20 @@
   <body>
       <h1>Building form creation function</h1>
       <main>
-        <button id="add-start-form">Add Pup start button</button>
+     
         
-        <form id="form-insert" action=""></form>
+        <form id="form-insert">
+
+            <!-- Name  -->
+           <label for="pname">Pup name:</label> <input id="name-input" type="text" name="pname"  required>
+        
+            <!-- DOB -->
+            <label for="bday">Birthday:</label> <input id="dob-input" type="date" name="bday" required>
+
+            <button id="button" type="submit" form="form-insert"> Submit </button>
+        </form>
+
+ <!-- Submit button -->
 
       </main>
 
