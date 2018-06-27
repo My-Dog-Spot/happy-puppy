@@ -28,9 +28,13 @@ var createDogFromFormInput = function(event) {
 
   var storySubmitText = event.target.querySelector('textarea[name="story-text"]').value;
 
-  var imgSubmitInput = '';
+  var chunkDropdown = event.target.querySelector('#pet-img-select');
+  
+  var imgPetDropDown = chunkDropdown.options[chunkDropdown.selectedIndex].value;
+  console.log(imgPetDropDown);
 
-  new ArrayDogConstructor(nameSubmitInput, bdaySubmitInput, storySubmitText, imgSubmitInput, genderSubmitInput);
+
+  new ArrayDogConstructor(nameSubmitInput, bdaySubmitInput, storySubmitText, imgPetDropDown, genderSubmitInput);
   console.log(dogTestArray);
 };
 
@@ -38,9 +42,8 @@ var createDogFromFormInput = function(event) {
 document.getElementById('form-insert').addEventListener('submit', createDogFromFormInput);
 
 
-
-  // create form on the "form-insert" id
-  // form should create 1 form field and then build other parts of the field
+// create form on the "form-insert" id
+// form should create 1 form field and then build other parts of the field
 
 // Remove is the opposite of appendchild. Used unique ID to 
 // document .getElementById("myTable").deleteRow(0)
