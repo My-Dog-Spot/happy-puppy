@@ -27,11 +27,11 @@ function Dog(portrait, name, birthdate, gender, story) {
   this.story = story;
   this.id = id();
   // TODO - add in medical records (stretch goal)
-  this.potentialOwner;
+  this.potentialOwnerId;
 }
 
-Dog.prototype.setPotentialOwner = function(potentialOwner) {
-  this.potentialOwner = potentialOwner;
+Dog.prototype.setPotentialOwner = function(potentialOwnerId) {
+  this.potentialOwnerId = potentialOwnerId;
 };
 
 // personal info of customers
