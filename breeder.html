@@ -1,64 +1,99 @@
 <!DOCTYPE html>
-
-
 <html>
 
 <head>
-  <title>Table and Form</title>
+  <title> Whelping Box</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="">
 </head>
 
 <body>
-<h1>what has a border here?</h1>
- <main>
+  <nav>
+    <ul>
+      <li>
+        <img href="#home" class="brand-logo" src="img/dog-316930__340.jpg">
+      </li>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="whelping-box.html">Welping Box</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="contactUs.html">Contact Us</a>
+      </li>
+      <li>
+        <a href="application.html">Application</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h1> Here are our puppies! </h1>
 
-  <!-- Table element -->
-   <!-- <section>
-     <table id="dogTable"></table>
-   </section> -->
-    
-   <!-- Form Element -->
-   <form action="#" method="get" id="form1">
+    <form id="form-insert">
+      <!-- Name  -->
+      <label for="pname"> Pup name: </label>
+      <input id="name-input" type="text" name="pname" required>
+      <!-- DOB -->
+      <label for="bday">Birthday: </label>
+      <input id="dob-input" type="date" name="bday" required>
+      <!-- Gender -->
+      <fieldset>
+        <legend>Gender: </legend>
+        <input id="male" name="answer" type="radio" value="Male" checked="true" />
+        <label for="male"> Male </label>
+        <input id="female" name="answer" type="radio" value="Female" />
+        <label for="female"> Female </label>
+      </fieldset>
+      <!-- Story input field -->
+      <label for="story-text"> Dog Story: </label>
+      <textarea name="story-text" rows=3 cols=30></textarea>
+      <label for="pet-select">Pet img:</label>
+      <select id="pet-img-select" required>
+        <option value="img/cairn-terriers-1.jpg" selected> cairn-terriers-1</option>
+        <option value="img/cairn-terriers-2.jpg">Cat</option>
+      </select> ****FIX****
+      <!-- Submit Button -->
+      <button id="button" type="submit" form="form-insert"> Submit </button>
+    </form>
 
-    <!-- Name  -->
-    Pup name: <input type="text" name="fname" required><br>
-
-    <!-- DOB -->
-    Birthday: <input type="date" name="bday" required><br>
-
-    Gender Field
-    <input checked="checked" name="answer" type="radio" value="Male" /> Male 
-    <input name="answer" type="radio" value="Female" /> Female
-
-    <!-- Dog story field -->
-    <p>Dog story</p> <TEXTAREA NAME="Address" ROWS=3 COLS=30 ></TEXTAREA><br>
-
-
-    <!-- Dog Image from drop down menu -->
-    <label for="pet-select">Pet img:</label>
-
-      <select id="pet-select">
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-      <option value="none" selected>--Please choose an option--</option>
-      </select>
-        ****FIX**** 
-  </form>
-
-  <!-- Submit button -->
-  <button type="submit" form="form1" value="Submit">Submit</button>
-
-
-<!-- Event listener on Submit button -->
-
-
+    <table id="whelping-box-table"> This is where the table goes </table>
 
   </main>
-
-  <footer> </footer>
-
-  <script src="js/app.js"></script>
+  <footer>
+    <div>
+      <h2> Copyright (c) 2018 My-Dog-Spot </h2>
+      <img href="#home" class="brand-logo" src="img/dog-316930__340.jpg">
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="whelping-box.html">Welping Box</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contactUs.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="application.html">Application</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/dog.js"></script>
+  <script src="js/whelping.js"></script>
   <script src="js/breeder.js"></script>
 </body>
 
