@@ -263,10 +263,11 @@ th {
 
 td {
   font-family: 'Helvetica', sans-serif;
-  color:blue;
   font-size: small;
   padding: 1px 5px 1px 15px;
 }
+
+
 
 table, th, td {
   border: 1px solid black;
