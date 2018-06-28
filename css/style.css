@@ -7,7 +7,6 @@
 
 body {
   background-color: rgb(222,213,196);
-  /* width: 1020px; */
   position: relative;
   margin: 0px auto;
   
@@ -20,7 +19,7 @@ body {
 nav {
   background-color: rgb(107, 81, 91);
   position: fixed;
-  /* margin: 0px auto; */
+  margin: 0px auto;
   width: 100%;
   z-index: 3;
   height: 108px;
@@ -61,14 +60,21 @@ main {
   /* outline: 4px dotted black; */
 }
 
+section {
+  width: 1020px;
+  margin: 0px auto;
+  outline: 4px dotted black;
+}
+
 footer {
+  display: inline-block;
   background-color: rgb(107, 81, 91);
   color: rgb(237, 198, 131);
   /* text-align: center; */
   height: 175px;
   margin-top: 30px;
   width: 100%;
-  margin: 0px auto;
+  
 }
 
 
@@ -116,9 +122,9 @@ footer a {
 }
 
 footer div {
-  clear: both;
+  
   float:left;
-  width: 330px;
+  width: 25px;
   height: 220px;
   /* margin: 0; */
   float:left;
