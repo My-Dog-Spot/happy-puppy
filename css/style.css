@@ -263,10 +263,11 @@ th {
 
 td {
   font-family: 'Helvetica', sans-serif;
-  color:blue;
   font-size: small;
   padding: 1px 5px 1px 15px;
 }
+
+
 
 table, th, td {
   border: 1px solid black;
@@ -296,6 +297,7 @@ ol li a img {
   padding-bottom: 15px;
   font-weight: bold;
 }
+
 .about p {
   /* outline: 5px dotted blue; */
   float: left;
@@ -303,6 +305,11 @@ ol li a img {
   width: 899px;
   height: 146px;
   font-size: 20px;
+}
+
+.contact-info p {
+  text-align: center;
+  line-height: 1.5;
 }
 
 
