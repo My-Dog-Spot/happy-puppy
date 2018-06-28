@@ -1,17 +1,12 @@
 'use strict';
 
-// TODO: image display
-// TODO: link to application page (listener)
-// TODO: Get headings to proper case
-// TODO: Don't display id nor portential owner
-
+// location for the links in the table
 var tableLinkRef = 'application.html';
 
 // adjust image size, keeping ratio
 var imageScale = 4;
-
+// adjust image size
 var tableImageWidth = 40 * imageScale;
-
 var tableImageHeight = 30 * imageScale;
 
 // instantiate a sample Dog object for use in renderWhelpingHeaderRow and renderWhelpingBodyRow
@@ -92,9 +87,8 @@ function renderWhelpingBodyRow(dogObject) {
         imageEl.height = tableImageHeight;
         // imageEl3 - append to the anchor
         anchorEl.appendChild(imageEl);
-        console.log(rowDataEl);
       }
-    
+
       // th3 - append to the DOM
       bodyRow.appendChild(rowDataEl);
 
@@ -115,7 +109,7 @@ function renderWhelpingBodyRowAll() {
   for(var i = 0; i < whelpingDogArray.length; i++) {
     // use the object's data to render the table's body rows
     renderWhelpingBodyRow(whelpingDogArray[i]);
-  }  
+  }
 }
 
 // renders the header and the body

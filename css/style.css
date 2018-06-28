@@ -54,9 +54,10 @@ nav a:hover {
 
 main {
   display: inline-block;
-  height: 315px;
+  /* height: 315px; */
   display: block;
   width: 1020px;
+  height: 350px;
   margin: 0px auto;
   padding-bottom: 20px;
   /* outline: 4px dotted black; */
@@ -66,6 +67,13 @@ section {
   width: 1020px;
   margin: 0px auto;
   /* outline: 4px dotted black; */
+}
+
+/* #whelping-box-table {
+
+} */
+table{
+
 }
 
 article {
@@ -125,28 +133,34 @@ select {
 }
 
 .hero-img {
+  display: block;
     /* outline: 4px dotted black; */
-  margin: 0px 30px 30px 0px;
-  /* width: 400;  */
+  /* margin: 0px 30px 30px 0px; */
+  width: 400; 
+  height: 290px;
   float: left;
 }
+
 .hero-text {
     /* outline: 4px dotted black; */
   font-size: 20px;
-  padding-top: 50px;
-  padding-bottom: 40px;
-  height: 200px; 
+  
+  /* padding-top: 50px;
+  padding-bottom: 40px; */
+  height: 290px; 
+  width: 400px;
 }
 
 div {
+  display: block;
   /* outline: 4px dotted red; */
   /* clear: both; */
   float: left;
   width: 400px;
-  height: 320px; 
+  height: 290px; 
   position: relative;
   z-index: 1;  
-  margin-left: 73px;
+  padding: 0, 50px ; 
 }
 
 footer ul {
@@ -168,17 +182,12 @@ footer a {
 }
 
 footer div {
-  
   float:left;
   width: 250px;
   height: 220px;
   /* margin: 0; */
   float:left;
   text-align: center;
-}
-
-ol li {
-  padding-bottom: 40px;
 }
 
 .left-content-panel {
@@ -192,10 +201,11 @@ h1 {
   font-size: 60px;
   text-align: center;
   padding-top: 125px;
-  margin-bottom: 15px;
+  margin: 15px auto ;
   color: rgb(91,76,73);
   text-shadow: 3px 2px 2px rgb(93, 126, 105);
 }
+
 h2 {
   font-weight: bold;
   /* float: left ; */
@@ -209,7 +219,7 @@ h6 {
   font-size: 20px;
   color: rgb(237, 198, 131);
   padding-left: 6px;
-  color: blue;
+  /* color: blue; */
   text-decoration-line: underline;
 
 }
@@ -218,7 +228,7 @@ p {
   color: rgb(91,76,73);
 }
 
- div p {
+div p {
   position: absolute;
   bottom: 50px; 
   left: 80px;
@@ -228,6 +238,7 @@ p {
   border-radius: 8px;
   font-size: 23px;
 }
+
 
 #badge {
   width: 20%;
@@ -253,12 +264,55 @@ th {
 
 td {
   font-family: 'Helvetica', sans-serif;
-  color:blue;
   font-size: small;
   padding: 1px 5px 1px 15px;
 }
 
+
+
 table, th, td {
   border: 1px solid black;
 }
+
+
+ol li {
+  list-style-type: none;
+  display: inline;
+}
+
+ol li a img {
+  display: block;
+  padding-top: 5px;
+}
+
+.about {
+  /* outline: 5px dotted green; */
+  width: 1020px;
+  height: 253px;
+  margin: 0px auto;
+}
+
+.about h3 {
+  font-size: 35px;
+  color: rgb(93, 126, 105);
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.about p {
+  /* outline: 5px dotted blue; */
+  float: left;
+  margin-left: 25px;
+  width: 899px;
+  height: 146px;
+  font-size: 20px;
+}
+
+.contact-info p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+
+
 
