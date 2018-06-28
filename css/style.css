@@ -30,7 +30,7 @@ nav {
 nav ul {
   margin: 0px auto;
   margin-bottom: 15px;
-  width: 960px;
+  width: 1020px;
 }
 
 nav li {
@@ -124,7 +124,7 @@ footer a {
 footer div {
   
   float:left;
-  width: 25px;
+  width: 250px;
   height: 220px;
   /* margin: 0; */
   float:left;
