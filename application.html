@@ -36,7 +36,37 @@
       </ul>
   </nav>
   <h1> Let's  get your application for a new Puppy Started!</h1>
-<footer>
+
+<main>
+    <form id="puppy-application">
+        <fieldset>
+          <legend>application for Scottie Puppy </legend>
+            <!-- All fields are required -->
+          <label for="firstName">First Name:</label>
+          <input name="firstName" type="text" required>
+            
+          <label for="middleName">Middle Name :</label>
+          <input name="middleName" type="text" required>
+            
+          <label for="lastName"> Last Name:</label> 
+          <input name="lastName" type=" text" required>
+          <!-- dropdown box for prefix -->
+          <label for="prefix"> Last Name:</label> 
+          <select name="prefix" type=" dropdown" required>
+            <option value=:"Mr">Mr.</option>
+            <option value=:"Mrs"> Mrs.</option> 
+          </select>
+          <!-- drop down box for suffix -->
+          <label for="suffix"> Suffix:</label> 
+          <select name="suffix" required>
+            <option value=:"None">None.</option>
+            <option value=:"Jr."> Jr.</option> 
+          </select>
+          <button> add store data</button>
+        </fieldset>
+      </form>
+</main>
+  <footer>
   <section>
     <div>
     <h2> Copyright (c) 2018 My-Dog-Spot </h2>

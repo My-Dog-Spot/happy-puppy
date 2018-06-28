@@ -45,13 +45,15 @@ https://pixabay.com/en/cairn-terriers-dog-puppy-492040/
 cairn-terriers_hero
 https://pixabay.com/en/cairn-terriers-dog-puppy-492036/
 
-<<<<<<< HEAD
 
 GitHub permissions 
 https://github.com/logos
 
-=======
 3scottish_terriers_400x246.jpg
 3scottish_terriers_800x493.jpg
 By Walescot [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File:3scottish_terriers.jpg">from Wikimedia Commons</a>
->>>>>>> a82bcaaf7a66d087f06a19410923ba5834cf2ce0
+
+featured-banner
+This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license.
+https://commons.wikimedia.org/wiki/File:Uncyclopedia_Featured.png
+
