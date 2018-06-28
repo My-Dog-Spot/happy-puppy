@@ -1,18 +1,20 @@
 'use strict';
 /**
- * TO
+ * TODO
  */
 
 // A set of dog instances.
 var dog = [];
 
+// A set of featured dogs.
+var featDogs = [];
+
 // A set of person instances
-var person = [];
+var personArray = [];
 
 // The local storage dog key
 var localStorageDogKey = 'happy-puppy-dog-storage';
-
-// reserving from the Dog constructor
+var localStorageFeatDogKey = 'happy-puppy-featured-dogs';
 
 /**
  * Product Object with constructor and methods.
@@ -32,7 +34,6 @@ Dog.prototype.setPotentialOwner = function(potentialOwner) {
   this.potentialOwner = potentialOwner;
 };
 
-
 // personal info of customers
 function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
   this.id = id();
@@ -44,13 +45,11 @@ function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
   this.reservedDog = [];
 }
 
-
 // reserving dogs
 Person.prototype.reserveDog = function(chosenDog) {
   this.reservedDog.push(chosenDog);
   chosenDog.setPotentialOwner(this.id);
 };
-
 
 /**
  * This is from https://gist.github.com/gordonbrander/2230317
@@ -62,7 +61,6 @@ var id = function () {
   // after the decimal.
   return '_' + Math.random().toString(36).substr(2, 9);
 };
-
 
 /**
  * Convenience method to initialize dog array with instances.
@@ -77,43 +75,52 @@ function initializeDogSet() {
   dog.push(new Dog('img/cairn-terriers-12.jpg', 'Mrs Davis', '03/01/2018', 'female', 'An old soul, wise beyond her weeks. "humph"'));
 }
 
-// initialize person instances
-function initializePersons() {
-  var customer = new Person();
-  customer.reserveDog(dog[0]);
-  person.push(customer);
-
-  customer.reserveDog(dog[1]);
-  person.push(customer);
-
-  customer.reserveDog(dog[2]);
-  person.push(customer);
+function initializeFeaturedDogs() {
+  // generate random number based on index of dog set
+  var randomIndexOne = Math.floor(Math.random() * dog.length);
+  // push dog at that index into featured dogs
+  featDogs.push(randomIndexOne);
+  // generate random number based on index of dog set
+  var randomIndexTwo = Math.floor(Math.random() * dog.length);
+  // ensure there are no repeat selections
+  while(randomIndexOne === randomIndexTwo) {
+    randomIndexTwo = Math.floor(Math.random() * dog.length);
+  }
+  // push dog at that index into featured dogs
+  featDogs.push(randomIndexTwo);
 }
 
+// initialize person instances
+function initializePersons() {
+  var customer = new Person('Jed', 'I', 'Knight', null, null);
+  customer.reserveDog(dog[0]);
+  personArray.push(customer);
+
+  customer = new Person('Bud', null, 'Light', null, null);
+  customer.reserveDog(dog[1]);
+  personArray.push(customer);
+
+  customer = new Person('Chris', 'P', 'Bacon', null, null);
+  customer.reserveDog(dog[2]);
+  personArray.push(customer);
+}
 
 /**
  * Use the browsers HTML 5 local storage capability to save or load the users dog data.
  * This is a 201 hack since we're not yet able to persist to back end.
  */
-function saveDogResultsToLocalStorage() {
+function saveDogsToLocalStorage() {
   localStorage.setItem(localStorageDogKey, JSON.stringify(dog));
+  localStorage.setItem(localStorageFeatDogKey, JSON.stringify(featDogs));
 }
 
 function loadResultsFromStorage() {
   dog = JSON.parse(localStorage.getItem(localStorageDogKey));
 }
-// --------------------------------------------------------------------------------
-// function savePersonResultsToLocalStorage() {
-//   localStorage.setItem(localStoragePerson, JSON.stringify(person));
-// }
 
-// function loadResultsFromStorage() {
-//   person = JSON.parse(localStorage.getItem(localStoragePerson));
-// }
-
-//Instantiate product objects
+//Initialize instances for development sake.
 initializeDogSet();
+initializeFeaturedDogs();
 initializePersons();
 
-saveDogResultsToLocalStorage();
-// savePersonResultsToLocalStorage();
+saveDogsToLocalStorage();

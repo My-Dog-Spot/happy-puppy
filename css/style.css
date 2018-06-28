@@ -87,7 +87,7 @@ footer {
 }
 
 div {
-  outline: 4px dotted red;
+  /* outline: 4px dotted red; */
   /* clear: both; */
   float: left;
   width: 400px;
