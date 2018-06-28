@@ -32,27 +32,9 @@ var createDogFromFormInput = function(event) {
   var imgPetDropDown = chunkDropdown.options[chunkDropdown.selectedIndex].value;
   var newDogFromForm = new Dog(imgPetDropDown, nameSubmitInput, bdaySubmitInput, genderSubmitInput, storySubmitText);
 
-  var duplicateEntries = 0;
-  // loop through the array to detect duplicates
-  for(var i in breederDogArray) {
-    console.log(breederDogArray[i]);
-    for(var j in breederDogArray[i]) {
-      console.log(breederDogArray[i][j]);
-      console.log(newDogFromForm[j]);
-      if(breederDogArray[i][j] === newDogFromForm[j]) {
-        console.log('same at ' + j + i);
-        duplicateEntries += 1;
-      }
-    }
-  }
-
-  if(duplicateEntries < 5) {
-    breederDogArray.push(newDogFromForm);
-    localStorage.setItem(localStorageDogKey, JSON.stringify(breederDogArray));
-    alert('You have saved ' + newDogFromForm.name + ' to the whelping box!')
-  } else {
-    alert('Please enter unique information.');
-  }
+  breederDogArray.push(newDogFromForm);
+  localStorage.setItem(localStorageDogKey, JSON.stringify(breederDogArray));
+  alert('You have saved ' + newDogFromForm.name + ' to the whelping box!');
 
   renderBreederTable();
 };
