@@ -28,9 +28,10 @@ function Dog(portrait, name, birthdate, gender, story) {
   this.id = id();
   // TODO - add in medical records (stretch goal)
   this.potentialOwnerId;
+  dog.push(this);
 }
 
-Dog.prototype.setPotentialOwner = function(potentialOwnerId) {
+Dog.prototype.setPotentialOwner = function (potentialOwnerId) {
   this.potentialOwnerId = potentialOwnerId;
 };
 
@@ -46,7 +47,7 @@ function Person(firstName, middleName, lastName, namePrefix, nameSuffix) {
 }
 
 // reserving dogs
-Person.prototype.reserveDog = function(chosenDog) {
+Person.prototype.reserveDog = function (chosenDog) {
   this.reservedDog.push(chosenDog);
   chosenDog.setPotentialOwner(this.id);
 };
@@ -66,13 +67,13 @@ var id = function () {
  * Convenience method to initialize dog array with instances.
  */
 function initializeDogSet() {
-  // (portrait, name, birthdate, gender, story)
-  dog.push(new Dog('img/can-u-beat-my-adorability-score.png', 'Shrek', '05/19/2018', 'male', 'Like his namesake, he is a confident and independent, though not very green!'));
-  dog.push(new Dog('img/powtee-scowtee.png', 'Donkey', '05/19/2018', 'male', 'This one is happy, energetic, and always playful. "Man, it\'s good to be free!"'));
-  dog.push(new Dog('img/we-need-some-time-apart.png', 'Princess Fiona', '05/19/2018', 'female', 'She is a proper princess! She\'s a little standoffish, and a little unsure about her brothers. "It talks!"'));
-  dog.push(new Dog('img/cairn-terriers-hero.jpg', 'Hannah', '03/01/2018', 'female', 'Oh boy! She is loud and in charge! Always alert and active. "What do you mean, you don\'t know?"'));
-  dog.push(new Dog('img/cairn-terriers-3.jpg', 'Bo Peep', '03/01/2018', 'female', 'Gentle, sensitive, and nuturing towards her siblings, a lovely and sweet pup. "Potato Head!"'));
-  dog.push(new Dog('img/cairn-terriers-12.jpg', 'Mrs Davis', '03/01/2018', 'female', 'An old soul, wise beyond her weeks. "humph"'));
+  dog = [];// for page
+  new Dog('img/can-u-beat-my-adorability-score.png', 'Shrek', '05/19/2018', 'male', 'Like his namesake, he is a confident and independent, though not very green!');
+  new Dog('img/powtee-scowtee.png', 'Donkey', '05/19/2018', 'male', 'This one is happy, energetic, and always playful. "Man, it\'s good to be free!"');
+  new Dog('img/we-need-some-time-apart.png', 'Princess Fiona', '05/19/2018', 'female', 'She is a proper princess! She\'s a little standoffish, and a little unsure about her brothers. "It talks!"');
+  new Dog('img/cairn-terriers-hero.jpg', 'Hannah', '03/01/2018', 'female', 'Oh boy! She is loud and in charge! Always alert and active. "What do you mean, you don\'t know?"');
+  new Dog('img/cairn-terriers-3.jpg', 'Bo Peep', '03/01/2018', 'female', 'Gentle, sensitive, and nuturing towards her siblings, a lovely and sweet pup. "Potato Head!"');
+  new Dog('img/cairn-terriers-12.jpg', 'Mrs Davis', '03/01/2018', 'female', 'An old soul, wise beyond her weeks. "humph"');
 }
 
 function initializeFeaturedDogs() {
@@ -83,7 +84,7 @@ function initializeFeaturedDogs() {
   // generate random number based on index of dog set
   var randomIndexTwo = Math.floor(Math.random() * dog.length);
   // ensure there are no repeat selections
-  while(randomIndexOne === randomIndexTwo) {
+  while (randomIndexOne === randomIndexTwo) {
     randomIndexTwo = Math.floor(Math.random() * dog.length);
   }
   // push dog at that index into featured dogs
@@ -114,13 +115,23 @@ function saveDogsToLocalStorage() {
   localStorage.setItem(localStorageFeatDogKey, JSON.stringify(featDogs));
 }
 
-function loadResultsFromStorage() {
-  dog = JSON.parse(localStorage.getItem(localStorageDogKey));
+function loadDogsFromLocalStorage() {
+  if(JSON.parse(localStorage.getItem(localStorageDogKey))) {
+    dog = JSON.parse(localStorage.getItem(localStorageDogKey));
+    featDogs = JSON.parse(localStorage.getItem(localStorageFeatDogKey));
+  }
+}
+
+// Initialze the data for this site.
+function initialize() {
+  loadDogsFromLocalStorage();
+  if (dog.length<1) {
+    initializeDogSet();
+    initializeFeaturedDogs();
+    initializePersons();
+    saveDogsToLocalStorage();
+  }
 }
 
 //Initialize instances for development sake.
-initializeDogSet();
-initializeFeaturedDogs();
-initializePersons();
-
-saveDogsToLocalStorage();
+initialize();
