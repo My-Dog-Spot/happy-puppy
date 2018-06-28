@@ -22,6 +22,7 @@ var dogPropertiesArrayForHeader = ['Portrait', 'Name'];
 var breederTableEl = document.getElementById('breeder-box-table');
 
 // From form in HTML, take user input and store in variables before being passed to the constructor to create new dogs.
+
 var createDogFromFormInput = function(event) {
   event.preventDefault();
   var nameSubmitInput = event.target.querySelectorAll('[name=pname]')[0].value;
@@ -33,6 +34,10 @@ var createDogFromFormInput = function(event) {
   var newDogFromForm = new Dog(imgPetDropDown, nameSubmitInput, bdaySubmitInput, genderSubmitInput, storySubmitText);
 
   breederDogArray.push(newDogFromForm);
+
+  // Reset/Clear form inputs on submit button click
+  document.getElementById('form-insert').reset();
+
   localStorage.setItem(localStorageDogKey, JSON.stringify(breederDogArray));
   alert('You have saved ' + newDogFromForm.name + ' to the whelping box!');
 
@@ -42,7 +47,7 @@ var createDogFromFormInput = function(event) {
 // Event listener to new dog submission.
 document.getElementById('form-insert').addEventListener('submit', createDogFromFormInput);
 
-// Remove is the opposite of appendchild. Used unique ID to 
+// Remove is the opposite of appendchild. Used unique ID to
 // document .getElementById("myTable").deleteRow(0)
 // remove field button
 // Stringafy data into JSON for local data storage
