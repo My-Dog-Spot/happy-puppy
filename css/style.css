@@ -152,7 +152,7 @@ select {
 
 div {
   display: block;
-  outline: 4px dotted red;
+  /* outline: 4px dotted red; */
   /* clear: both; */
   float: left;
   width: 400px;
@@ -286,6 +286,7 @@ ol li a img {
 .about {
   /* outline: 5px dotted green; */
   width: 1020px;
+  height: 253px;
   margin: 0px auto;
 }
 
@@ -299,14 +300,11 @@ ol li a img {
   /* outline: 5px dotted blue; */
   float: left;
   margin-left: 25px;
-  width: 879px;
-  height: 200px;
+  width: 899px;
+  height: 146px;
   font-size: 20px;
 }
 
-.headers {
-  /* outline: 5px black dotted; */
-}
 
 
 
