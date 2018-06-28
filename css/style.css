@@ -7,7 +7,7 @@
 
 body {
   background-color: rgb(222,213,196);
-  width: 1020px;
+  /* width: 1020px; */
   position: relative;
   margin: 0px auto;
   
@@ -21,9 +21,9 @@ nav {
   background-color: rgb(107, 81, 91);
   position: fixed;
   /* margin: 0px auto; */
-  width: 1020px;
+  width: 100%;
   z-index: 3;
-  height: 125px;
+  height: 108px;
   top: 0;
   
 }
@@ -44,7 +44,8 @@ nav a {
   text-decoration: none;
   color: rgb(237, 198, 131);
   display: block;
-  }
+  padding:5px;
+}
 
 nav a:hover {
   background-color: rgb(93, 126, 105);
@@ -57,28 +58,28 @@ main {
   display: block;
   width: 1020px;
   margin: 0px auto;
-  outline: 4px dotted black;
+  /* outline: 4px dotted black; */
 }
 
 footer {
   background-color: rgb(107, 81, 91);
   color: rgb(237, 198, 131);
-  text-align: center;
-  height: 220px;
+  /* text-align: center; */
+  height: 175px;
   margin-top: 30px;
-  width: 1020px;
+  width: 100%;
   margin: 0px auto;
 }
 
 
 .hero-img {
-    outline: 4px dotted black;
+    /* outline: 4px dotted black; */
   margin: 0px 30px 30px 0px;
   /* width: 400;  */
   float: left;
 }
 .hero-text {
-    outline: 4px dotted black;
+    /* outline: 4px dotted black; */
   font-size: 20px;
   padding-top: 50px;
   padding-bottom: 40px;
@@ -106,19 +107,27 @@ footer li {
 }
 
 footer a {
+
+  /* float: left; */
   padding-bottom: 14px;
   text-decoration: none;
   color: rgb(237, 198, 131);
   
 }
 
- footer div {
-   /* float: left; */
-   width: 400px; 
-   height: 220px;
-   margin: 0;
-   text-align: left;
- }
+footer div {
+  clear: both;
+  float:left;
+  width: 330px;
+  height: 220px;
+  /* margin: 0; */
+  float:left;
+  text-align: center;
+}
+
+ol li {
+  padding-bottom: 40px;
+}
 
 .left-content-panel {
   margin: 0px 30px 0px 0px;
@@ -144,9 +153,13 @@ h2 {
 }
 
 h6 {
-  font-size: 12px;
+  padding-top: 70px;
+  font-size: 20px;
   color: rgb(237, 198, 131);
   padding-left: 6px;
+  color: blue;
+  text-decoration-line: underline;
+
 }
 
 p {
@@ -173,6 +186,12 @@ button:hover {
   background-color: #fff;
 }
 
+#github-logo {
+  position: absolute;
+  left: 115px;
+  top: 20px;
+}
+
 th {
   padding: 2.5px;
 }
@@ -187,3 +206,4 @@ td {
 table, th, td {
   border: 1px solid black;
 }
+
