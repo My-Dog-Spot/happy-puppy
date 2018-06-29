@@ -28,6 +28,7 @@ function renderFeaturedDogs() {
 
   // overlay the dogs litter name
   var leftFeaturedDogNameEl = document.createElement('p');
+  leftFeaturedDogNameEl.id = 'name-tag';
   leftFeaturedDogNameEl.textContent = dog[featDogs[0]].name;
   featureLeftDivEl.appendChild(leftFeaturedDogNameEl);
 
@@ -47,6 +48,7 @@ function renderFeaturedDogs() {
 
   // overlay the dogs litter name
   var rightFeaturedDogNameEl = document.createElement('p');
+  rightFeaturedDogNameEl.id = 'name-tag';
   rightFeaturedDogNameEl.textContent = dog[featDogs[1]].name;
   featureRightDivEl.appendChild(rightFeaturedDogNameEl);
 }
