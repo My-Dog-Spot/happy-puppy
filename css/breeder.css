@@ -53,13 +53,15 @@ nav a:hover {
 }
 
 main {
-  display: inline-block;
+  /* position: relative; */
+
+  /* display: inline-block; */
   /* height: 315px; */
-  display: block;
+  /* display: block;*/
   width: 1020px;
-  height: 350px;
+  /* height: 350px; */
   margin: 0px auto;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   /* outline: 4px dotted black; */
 }
 
@@ -73,7 +75,7 @@ section {
 
 } */
 table{
-
+float:left;
 }
 
 article {
@@ -103,6 +105,7 @@ footer {
 
 
 form {
+  display: fixed;
   margin: 10 auto; 
   width:250px;
   border: 1px solid black;
@@ -280,8 +283,9 @@ td {
 
 table, th, td {
   border: 1px solid black;
-  clear: both;
-  margin-top: 50px;
+  margin-left: 150px;
+  /* clear: both; */
+  /* margin-top: 50px; */
 }
 
 
