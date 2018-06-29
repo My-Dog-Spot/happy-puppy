@@ -1,10 +1,9 @@
-
 # This is a Code Fellows 201 Class Project
 http://codefellows.org/
 
 “Scratch a dog and you’ll find a permanent job.” – Franklin P. Jones (humourist)
 
-
+### You can visit our deployed site here: https://my-dog-spot.com/
 
 Image attributions 
 
