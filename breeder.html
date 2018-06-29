@@ -21,7 +21,7 @@
         <a href="index.html">Home</a>
       </li>
       <li>
-        <a href="whelping-box.html">Welping Box</a>
+        <a href="whelping-box.html">Whelping Box</a>
       </li>
       <li>
         <a href="about.html">About</a>
@@ -38,80 +38,75 @@
   <main>
     <h1> Here are our puppies! </h1>
 
-    <section id="breeder-dog-list">
-      <table id="breeder-box-table"></table>
-    </section>
-    <section id="maintain-dog-form">
-        <fieldset>
-      <form id="form-insert">
-        <!-- Name  -->
-        <label for="pname"> Pup name: </label>
-        <input id="name-input" type="text" name="pname" required>
-        <!-- DOB -->
-        <label for="bday">Birthday: </label>
-        <input id="dob-input" type="date" name="bday" required>
-        <!-- Gender -->
+    <form id="form-insert">
+      <!-- Name  -->
+      <label for="pname"> Pup name: </label>
+      <input id="name-input" type="text" name="pname" required>
+      <!-- DOB -->
+      <label for="bday">Birthday: </label>
+      <input id="dob-input" type="date" name="bday" required>
+      <!-- Gender -->
+      <fieldset>
+        <legend>Gender: </legend>
+        <input id="male" name="answer" type="radio" value="Male" />
+        <label for="male"> Male </label>
+        <input id="female" name="answer" type="radio" value="Female" />
+        <label for="female"> Female </label>
+      </fieldset>
+      <!-- Story input field -->
+      <label for="story-text"> Dog Story: </label>
+      <textarea name="story-text" rows=3 cols=30></textarea>
+      <label for="pet-select">Pet img:</label>
+      <select id="pet-img-select" required>
+        <option value="img/cairn-terriers-1.jpg" selected> cairn-terriers-1</option>
+        <option value="img/cairn-terriers-2.jpg">cairn-terriers-2</option>
+        <option value="img/cairn-terriers-12.jpg">cairn-terriers-12</option>
+        <option value="img/your-floors-suck.png">your-floors-suck</option>
+      </select>
+      <!-- Submit Button -->
+      <button id="button" type="submit" form="form-insert"> Submit </button>
+    </form>
 
-          <legend>Gender: </legend>
-          <input id="male" name="answer" type="radio" value="Male" />
-          <label for="male"> Male </label>
-          <input id="female" name="answer" type="radio" value="Female" />
-          <label for="female"> Female </label>
+    <table id="breeder-box-table"></table>
 
-        <!-- Story input field -->
-        <br>
-        <label class="story-label" for="story-text"> Dog Story: </label>
-        <textarea class="story-label" name="story-text" rows=3 cols=30></textarea>
-        <label for="pet-select">Pet img:</label>
-        <select id="pet-img-select" required>
-          <option value="img/cairn-terriers-1.jpg" selected> cairn-terriers-1</option>
-          <option value="img/cairn-terriers-2.jpg">cairn-terriers-2</option>
-          <option value="img/cairn-terriers-12.jpg">cairn-terriers-12</option>
-          <option value="img/your-floors-suck.png">your-floors-suck</option>
-        </select>
-        <!-- Submit Button -->
-        <button id="button" type="submit" form="form-insert"> Submit </button>
-      </form>
-    </fieldset>
-    </section>
   </main>
-  <footer>
-    <section>
-      <div>
-        <h2> Copyright (c) 2018 My-Dog-Spot </h2>
-        <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-        <br />
-      </div>
-      <div>
-        <ul>
-          <li>
+<!-- <footer>
+  <section>
+    <div>
+    <h2> Copyright (c) 2018 My-Dog-Spot </h2>
+    <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
+    <br />
+    </div>
+    <div>
+    <ul>
+        <li> 
             <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="whelping-box.html">Welping Box</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="contactUs.html">Contact Us</a>
-          </li>
-          <li>
-            <a href="application.html">Application</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <a target="_blank" href="https://github.com/My-Dog-Spot">
-          <img src="img/Octocat.jpg" width="50px" id="github-logo" alt="an octocat Github logo"> </a>
-        <a href="https://github.com/My-Dog-Spot">
-          <h6>Click here to visit our github page</h6>
-        </a>
-      </div>
-    </section>
-  </footer>
+        </li>
+        <li>
+          <a href="whelping-box.html">Whelping Box</a>
+        </li>
+        <li>
+          <a href="about.html" >About</a>
+        </li>
+        <li>
+          <a href ="contactUs.html">Contact Us</a>
+        </li>
+        <li>
+          <a href = "application.html">Application</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <a target="_blank" href="https://github.com/My-Dog-Spot"> <img src="img/Octocat.jpg" width="50px" id ="github-logo" alt="an octocat Github logo"> </a>
+      <a href="https://github.com/My-Dog-Spot"> <h6>Click here to visit our github page</h6> </a>
+      
+      
+    </div>
+  </section>
+  </footer> -->
   <script src="js/dog.js"></script>
   <script src="js/breeder.js"></script>
+
 </body>
 
 </html>
