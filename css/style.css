@@ -57,7 +57,7 @@ main {
   /* height: 315px; */
   display: block;
   width: 1020px;
-  height: 350px;
+  /* height: 350px; */
   margin: 0px auto;
   padding-bottom: 20px;
   /* outline: 4px dotted black; */
@@ -94,11 +94,9 @@ footer {
   display: inline-block;
   background-color: rgb(107, 81, 91);
   color: rgb(237, 198, 131);
-  /* text-align: center; */
   height: 175px;
   margin-top: 30px;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 
@@ -177,11 +175,8 @@ footer a {
 }
 
 footer div {
-  float:left;
   width: 250px;
   height: 220px;
-  /* margin: 0; */
-  float:left;
   text-align: center;
 }
 
@@ -190,7 +185,7 @@ footer div {
 }
 
 #featured-right-div {
-  margin-left: 40px;
+  margin-left: 85px;
 }
 
 /* 91  76  73    warm grey
@@ -231,7 +226,7 @@ div p {
   /* position: absolute; */
   bottom: 50px; 
   left: 80px;
-  padding: 8px;
+  /* padding: 8px; */
   color: rgb(91,76,73);
   background-color: rgba(222,213,196,.5);
   border-radius: 8px;
@@ -252,6 +247,9 @@ div p {
   z-index: 1;
 }
 
+hr {
+  display:block;
+}
 button:hover {
   background-color: #fff;
 }
@@ -286,6 +284,7 @@ ol li {
 
 ol li a img {
   display: block;
+  clear: left;
   padding-top: 5px;
 }
 
@@ -296,6 +295,10 @@ ol li a img {
   margin: 0px auto;
 }
 
+.about img {
+  float: left;
+}
+
 .about h3 {
   font-size: 35px;
   color: rgb(93, 126, 105);
@@ -304,19 +307,11 @@ ol li a img {
 }
 
 .about p {
-  /* outline: 5px dotted blue; */
-  float: left;
-  margin-left: 25px;
-  width: 899px;
-  height: 146px;
+  padding-left: 120px;
   font-size: 20px;
 }
 
 .contact-info p {
-  text-align: center;
+  text-align: left;
   line-height: 1.5;
 }
-
-
-
-
