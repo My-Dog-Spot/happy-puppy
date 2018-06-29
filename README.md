@@ -5,7 +5,7 @@ http://codefellows.org/
 
 ### You can visit our deployed site here: https://my-dog-spot.com/
 
-Image attributions 
+##### Image attributions 
 
 pixabay photos are under 
 CC0 Creative Commons
