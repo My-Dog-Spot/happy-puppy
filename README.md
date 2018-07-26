@@ -56,3 +56,11 @@ featured-banner
 This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license.
 https://commons.wikimedia.org/wiki/File:Uncyclopedia_Featured.png
 
+<!-- TODO We need to review all this, make required changes, to be compliant with terms and conditions -->  
+## petfinder api by Purina
+We are using the petfinder api with permission and according to the terms specified. See:
+##### docs/petfinder-license.txt
+##### https://www.petfinder.com/developers/api-docs
+##### Powered by Petfinder.com
+##### www.petfinder.com
+
