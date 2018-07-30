@@ -3,7 +3,27 @@
 237 198 131    tan
 222 213 196   eggshell
 91  76  73    warm grey
-93 126 105    pine */
+93 126 105    pine 
+
+@background-primary: rgb(222,213,196)
+@color-primary: rgb(91,76,73)
+@background-nav: rgb(107, 81, 91)
+@nav-link-color: rgb(237, 198, 131)
+@nav-link-hover: rgb(93, 126, 105)
+@article-border: rgb(91,76,73)
+@footer-background: rgb(107, 81, 91)
+@footer-color: rgb(237, 198, 131)
+@footer-link: rgb(237, 198, 131)
+@form-text-decoration: rgb(107, 81, 91)
+@fieldset: rgb(91,76,73)
+@h1-h5-color: rgb(91,76,73)
+@h1-text-shadow: rgb(93, 126, 105)
+@h6-color: rgb(237, 198, 131)
+@p-color: rgb(91,76,73)
+
+
+
+*/
 
 body {
   background-color: rgb(222,213,196);
