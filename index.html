@@ -6,56 +6,194 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/678b697ff9/UntitledProject/style.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/modules.css">
 </head>
 
 <body>
   <header>
-      <nav>
-          <ul>
-            <li>
-              <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-            </li>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="whelping-box.html">Whelping Box</a>
-            </li>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="contactUs.html">Contact Us</a>
-            </li>
-            <li>
-              <a href="application.html">Application</a>
-            </li>
-          </ul>
-        </nav>
+    <nav>
+      <ul>
+        <li><img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg"></li>
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="whelping-box.html">Whelping Box</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="application.html">Application</a></li>
+      </ul>
+    </nav>
   </header>
-  
-  <main>
-    <h1>The House of Code Fellows Scotties</h1>
-    <div class="hero-img">
-      <img src="img/3scottish_terriers_400x246.jpg">
-    </div>
 
-    <div class="hero-text">
-      <p>Welcome to Code Fellows Scotties! Here we breed, raise and sell Scottie dogs that will make for a perfect companion!
-        Feel free to take a look around our site and check out our featured dogs below! If you like what you see let us know.</p>
-    </div>
+  <main>
+<!-- Home to SPA -->
+    <section id="home">
+      <h1>The House of Code Fellows Scotties</h1>
+      <div class="hero-img">
+        <img src="img/3scottish_terriers_400x246.jpg">
+      </div>
+
+      <div class="hero-text">
+        <p>Welcome to Code Fellows Scotties! Here we breed, raise and sell Scottie dogs that will make for a perfect companion!
+          Feel free to take a look around our site and check out our featured dogs below! If you like what you see let us
+          know.</p>
+      </div>
+
+      <div id="featured-left-div">
+      </div>
+      <div id="featured-right-div">
+      </div>
+    </section>
+
+<!-- Contact info to SPA -->
+    <section id="contact-info">
+
+      <h1>Have Any Questions, Contact Us</h1>
+      <p>Office Phone: 253-123-4567
+        <br> Fax Number: 253-867-5309</p>
+      <p>Hours: Monday - Saturday 9AM to 8PM
+        <br> Sunday 10PM-6PM</p>
+      <p>Address: 2901 3rd Ave #300, Seattle, WA 98121</p>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.214507788373!2d-122.35406864230781!3d47.61829891952586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153758c88a61%3A0xe3d3fd29c55db518!2sCode+Fellows!5e0!3m2!1sen!2sus!4v1530221315808"
+        width="1020" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+<!-- Application to SPA -->
+
+    <section>
+      <h1> Let's get your application for a new Puppy Started!</h1>
+      <form id="puppy-application">
+        <fieldset>
+          <!-- All fields are required -->
+          <label for="firstName">First Name:</label>
+          <input name="firstName" type="text" required>
+
+          <label for="middleName">Middle Name :</label>
+          <input name="middleName" type="text" required>
+
+          <label for="lastName"> Last Name:</label>
+          <input name="lastName" type=" text" required>
+          <!-- dropdown box for prefix -->
+          <label for="prefix"> Prefix:</label>
+          <select name="prefix" type=" dropdown" required>
+            <option value=: "Mr">Mr.</option>
+            <option value=: "Mrs"> Mrs.</option>
+          </select>
+          <!-- drop down box for suffix -->
+          <label for="suffix"> Suffix:</label>
+          <select name="suffix" required>
+            <option value=: "None">None.</option>
+            <option value=: "Jr."> Jr.</option>
+          </select>
+          <button id="button"> Apply for my Puppy</button>
+        </fieldset>
+      </form>
+
+      <article>
+        <p> Requirements for your new puppy </p>
+        <p>Before you bring your puppy home you need be prepared for the following : </p>
+        <p> I have the space for the puppy I am considering and can provide a dedicated area solely for the new puppy </p>
+        <p>I have researched my new puppy and can provide proper care, veterinary attention and proper nutrition</p>
+        <p>This puppy is not a gift for another. I am a mature person and will provide the majority of care for my new puppy</p>
+        <p>I pledge to spay or neuter my puppy </p>
+        <P>I will follow up with proper registration, maintain an ID tag and will microchip my new puppy. </P>
+      </article>
+    </section>
+
+<!-- About to SPA -->
+
+    <section class="about-section">
+      <h1>Get to Know Who We Are</h1>
+      <ol>
+        <div class="about">
+          <li>
+            <h3>David Hull</h3>
+            <img src="img/davidHullPortrait.jpg">
+            <a href="https://www.linkedin.com/in/davidehull/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <section class="paragraph">
+              <p>Hi! This site is the end product of our team going through an introductory programming course at Code Fellows
+                in Seattle. It's been a terrific experience, and I'm excited to continue learning and building even more
+                exciting solutions. Please send inquires via LinkedIn messaging.
+              </p>
+            </section>
+          </li>
+        </div>
+        <hr>
+
+        <div class="about">
+          <li>
+            <h3>Cheyna Humphries</h3>
+            <img src="img/cheynaHumphriesPortrait.jpg">
+            <a href="https://www.linkedin.com/in/cheynahumphries/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p>For the past month I have been a Code Fellows student in the 201 course. I started my journey here because I
+              wanted a better career, I wanted something where I could always be progressing and learning. This industry
+              offers tons of that so I took advantage. The class has been amazing and I have learned so much along the way
+              that I have been able to implement into this project and with that I have these great team members to help
+              me along the way!</p>
+          </li>
+        </div>
+        <hr>
+        <div class="about">
+          <li>
+            <h3>Brandon Haynes</h3>
+            <img src="img/brandonHaynesPortrait.jpg">
+            <a href="https://www.linkedin.com/in/brandonautomation/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p>I'm a kung fu master turned Air Force veteran turned software developer with a passion for languages and a knack
+              for creative problem solving. I enjoy the process of learning to understand complex systems, and then plying
+              that knowledge to impact those systems in helpful ways.</p>
+          </li>
+        </div>
+        <hr>
+        <div class="about">
+          <li>
+            <h3>Matthew Brown</h3>
+            <img src="img/matthewBrownPortrait.jpg">
+            <a href="https://www.linkedin.com/in/mthwbrwn/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p> I've had a great time working on this beginning programming site. I joined Code Fellows for a change of scenery
+              from my previous employment. I am now chasing a dream of becoming a software developer which is far more inline
+              with my love for puzzles and language learning. Please checkout our GitHub pages for additional content. </p>
+          </li>
+        </div>
+        <hr>
+        <div class="about">
+          <li>
+            <h3>J Christie</h3>
+            <img src="img/jChristiePortrait.jpg">
+            <a href="https://www.linkedin.com/in/j-christie-028266161/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p>I am an avid rock climber and bread baker. I am an Army Veteran with a colorful background of experinces ranging
+              from working after school programs with children to being a dirtbag climber to a father and into being a student.
+              I love solving problems and cultivating resources to make that happen efficiently and am building that tool
+              set at CodeFellows.</p>
+          </li>
+      </ol>
+      </div>
+      <hr>
+    </section>
+
+<!-- Whelping-Box to SPA -->
+
+    <section>
+      <h1> Here are our puppies! </h1>
+
+      <table id="whelping-box-table"> </table>
+    </section>
+
 
   </main>
-  <main>
-    <div id="featured-left-div">
-    </div>
-    <div id="featured-right-div">
-    </div>
-  </main>
-  <!-- <hr /> -->
 
   <footer>
     <section>
@@ -92,7 +230,11 @@
       </div>
     </section>
   </footer>
-  <!-- <script src="https://gist.github.com/gordonbrander/2230317.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.min.js"></script>
+
   <script src="js/dog.js"></script>
   <script src="js/index.js"></script>
 </body>
