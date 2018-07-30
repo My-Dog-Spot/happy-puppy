@@ -1,4 +1,41 @@
+nav {
+    display: none;
+    flex-direction: column;
+    transition: all ease .25s;
+}
 
+nav a {
+    width: 100%;
+    text-align: center;
+    padding: 3%;
+    background-color: rgb(107, 81, 91);
+    color: rgb(237, 198, 131);
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+nav a:hover {
+    background-color: rgb(138, 98, 91);
+}
+
+.header-content {
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-menu {
+    font-size: 3em;
+    color: rgb(237, 198, 131);
+    text-decoration: none;
+}
+
+
+/* Helper classes */
+
+.flexed {
+    display: flex;
+}
 
 @media only screen and (min-width:600px){
 /* TODO: Desktop styling section. */
