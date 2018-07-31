@@ -65,7 +65,7 @@ var app = app || {};
 
 (function(module){
 
-  let productionApiUrl = 'insert cloud API server URL here';
+  let productionApiUrl = 'https://my-dog-spot.herokuapp.com';
   let developmentApiUrl = 'http://localhost:3000';
 
   module.isProduction= /^(?!localhost|127)/.test(window.location.hostname);
@@ -74,6 +74,7 @@ var app = app || {};
     apiUrl: module.isProduction ? productionApiUrl : developmentApiUrl
   };
 
+  // Initiate nav functionality 
   module.mobileNav = () => {
     $('#menu').on('click', () => {
       if ($('nav').hasClass('flexed')) {
@@ -83,6 +84,17 @@ var app = app || {};
       }
     });
   }
+
+  //  Display functions
+  module.showOnly = (selector) => {
+    $('.js-container').hide();
+    $(selector).show();
+  };
+
+  module.render = (templateId, data) => {
+    module.template = Handlebars.compile($(`#${templateId}`).text());
+    return module.template(data);
+  };
 
 })(app);
 
