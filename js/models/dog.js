@@ -19,13 +19,14 @@ var app = app || {};
     return app.render(templateId, this);
   }
 
-  Puppy.loadAll = rows => {
-    rows.sort((a,b) => {
-      a.title - b.title;
-    });
 
-    Book.all = rows.map(puppyObj => new Puppy(puppyObj));
-  };
+  // TYLER - 
+  // Puppy.loadAll = rows => {
+  //   rows.sort((a,b) => {
+  //     a.name - b.name;
+  //   });
+
+  Puppy.all = rows.map(puppyObj => new Puppy(puppyObj));
 
   Puppy.create = puppy =>
     $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/puppies`, puppy)
