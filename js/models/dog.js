@@ -17,16 +17,8 @@ var app = app || {};
 
   Puppy.prototype.toHtml = function(templateId) {
     return app.render(templateId, this);
-  }
 
-
-  // TYLER - 
-  // Puppy.loadAll = rows => {
-  //   rows.sort((a,b) => {
-  //     a.name - b.name;
-  //   });
-
-  Puppy.all = rows.map(puppyObj => new Puppy(puppyObj));
+  Puppy.loadAll = rows => rows.sort((a,b) => a.birthdate - b.birthdate).map(puppyRawData => new Puppy(puppyRawData));
 
   Puppy.create = puppy =>
     $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/puppies`, puppy)
@@ -34,14 +26,14 @@ var app = app || {};
       .catch(errorCallback);
 
   Puppy.fetchOne = (context, callback) => {
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${context.params.puppy_id}`)
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/puppies/${context.params.puppy_id}`)
       .then(result => context.puppy = result[0])
       .then(callback)
       .catch(app.errorView.errorCallback);
   };
 
   module.Puppy = Puppy;
-})(app) 
+})(app);
 
 
 // /**
