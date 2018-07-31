@@ -17,6 +17,7 @@ var app = app || {};
 
   Puppy.prototype.toHtml = function(templateId) {
     return app.render(templateId, this);
+  };
 
   Puppy.loadAll = rows => rows.sort((a,b) => a.birthdate - b.birthdate).map(puppyRawData => new Puppy(puppyRawData));
 
