@@ -11,7 +11,7 @@ var app = app || {};
         $('#featured-view').empty();
         app.showOnly('#home');
         for (var i = 0; i < 2; i++) {
-            $('#featured-view').append(puppyList[Math.random() * puppyList.length].toHtml('featured-puppy-template'));
+            $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
         };    
     };
 
@@ -36,7 +36,7 @@ var app = app || {};
                 location: event.target.zipcode.value || '',
             }
 
-            module.Puppy.find(puppy, initSearchResultsPage);
+            module.ShelterPuppy.find(puppy, initSearchResultsPage);
 
             event.target.zipcode.value = '';
         });
