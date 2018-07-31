@@ -30,7 +30,8 @@ build/Release
 node_modules
 
 # intellij project
-.idea
+*.xml
+*.iml
 happy-puppy.iml
 github-token.txt
 petfinder-api-access.pdf

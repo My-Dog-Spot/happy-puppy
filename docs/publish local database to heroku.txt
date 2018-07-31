@@ -1,0 +1,8 @@
+Publish a local database to heroku.
+https://devcenter.heroku.com/articles/heroku-cli-commands
+$ heroku pg:push SOURCE TARGET
+
+heroku pg:push puppy_app DATABASE_URL --app my-dog-spot
+
+but first:
+export DATABASE_URL='postgres://spkcltnmzykrhf:59f2067797143c4e2bb9905c29818c00791158d8261a87fca3042af7c574553f@ec2-107-22-192-11.compute-1.amazonaws.com:5432/dbf5heebe23mq1'
