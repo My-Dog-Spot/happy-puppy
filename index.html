@@ -12,6 +12,44 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/modules.css">
+  <!-- Handlebars templates -->
+  <script id="featured-puppy-template" type="text/x-handlebars-template">
+    <a href="/breeder/puppies/{{{puppy_id}}}">
+      <figure>
+        <img src="{{image_url}}" />
+        <figcaption>
+          <h2>{{name}}</h2>
+        </figcaption>
+      </figure>
+    </a>
+  </script>
+
+  <script id="puppy-list-template" type="text/x-handlebars-template">
+    <a href="/breeder/puppies/{{{puppy_id}}}">
+      <figure>
+        <img src="{{image_url}}" />
+        <figcaption>
+            <h2>{{name}}</h2>
+            <h3>Date of birth: {{birthdate}} Gender: {{gender}}</h3>
+            <h3>{{story}}</h3>
+          </figcaption>
+      </figure>
+    </a>
+  </script>
+
+  <!-- Puppy detail template STRETCH GOAL -->
+  <!-- <script id="puppy-detail-template" type="text/x-handlebars-template">
+    <div>
+      <img src="{{image_url}}"> 
+      <div>
+          <h2>{{name}}</h2>
+          <h3>{{gender}}</h3>
+          <h3>Date of birth: {{birthdate}}</h3>
+          <p>{{story}}</p>
+      </div>                     
+    </div>
+  </script> -->
+
 </head>
 
 <body>
@@ -32,7 +70,7 @@
 
   <main>
 <!-- Home to SPA -->
-    <section id="home" class="container">
+    <section id="home" class="container js-container">
       <div class="headliner">
         <h1>The House of Code Fellows Scotties</h1>
         <img src="img/3scottish_terriers_400x246.jpg">
@@ -40,17 +78,16 @@
           Feel free to take a look around our site and check out our featured dogs below! If you like what you see let us
           know.</p>
       </div>
-      
-      <div>
-        <h2>Featured Dogs</h2>
-        <div id="featured-left-div"></div>
-        <div id="featured-right-div"></div>
+
+      <h2>Featured Dogs</h2>
+      <div id="featured-view">
+        <!-- Template for featured puppies will render here -->
       </div>
       
     </section>
 
 <!-- Contact info to SPA -->
-    <section id="contact-info" class="container">
+    <section id="contact-info" class="container js-container">
 
       <h1>Have Any Questions, Contact Us</h1>
       <p>Office Phone: 253-123-4567
@@ -65,7 +102,7 @@
 
 <!-- Application to SPA -->
 
-    <section class="container">
+    <section class="container js-container" id="puppy-application">
       <h1> Let's get your application for a new Puppy Started!</h1>
       <form id="puppy-application">
         <fieldset>
@@ -105,8 +142,13 @@
       </article>
     </section>
 
+    <!-- To display puppy detail view STRETCH GOAL -->
+    <!-- <section id="puppy-detail" class="js-container">
+
+    </section> -->
+
     <!-- Breeder form to add new puppy -->
-    <section id="add-puppy" class="js-container">
+    <section id="add-puppy" class="js-container container">
         <h1>Add a new puppy</h1>
       <form id="add-puppy-form" >
         <input type="text" name="name" placeholder="your puppie's name">
@@ -120,7 +162,7 @@
 
 <!-- About to SPA -->
 
-    <section class="container" id="about">
+    <section class="container js-container" id="about">
       <h1>Get to Know Who We Are</h1>
       <ol>
         <div class="about">
@@ -200,10 +242,10 @@
 
 <!-- Whelping-Box to SPA -->
 
-    <section>
+    <section id="whelping-box" class="js-container">
       <h1> Here are our puppies! </h1>
-
-      <table id="whelping-box-table"> </table>
+      
+      <div id="whelping-box-list"></div>
     </section>
 
 
@@ -249,9 +291,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.min.js"></script>
 
-  <script src="js/dog.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/menu.js"> </script>
+  <script src="js/models/dog.js"></script>
+  <script src="js/views/dog-view.js"></script>
+  <script src="js/views/breeder.js"></script>
+  <script src="js/views/application.js"></script>
+  <script src="js/controllers/routes.js"> </script>
 </body>
 
 </html>
