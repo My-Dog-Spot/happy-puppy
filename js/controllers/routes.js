@@ -1,8 +1,8 @@
 page('/'
-  , (context, next) =>  app.Puppy.fetchAll(() => app.puppyView.initIndexPage(context, next))
+  , (context, next) =>  app.Puppy.fetchAll(() => app.breederView.initIndexPage(context, next))
 );
 page('/puppies'
-  , (context, next) => app.Puppy.fetchAll(() => app.puppyView.initSearchForm(context, next))
+  , (context, next) =>  app.puppyView.initSearchForm(context, next)
 );
 
 // TYLER - This is a potential route for shelter puppy details; STRETCH GOAL

@@ -75,15 +75,13 @@ var app = app || {};
   };
 
   // Initiate nav functionality 
-  module.mobileNav = () => {
-    $('#menu').on('click', () => {
-      if ($('nav').hasClass('flexed')) {
-        $('nav').removeClass('flexed');
-      } else {
-        $('nav').addClass('flexed');
-      }
-    });
-  }
+  $('#menu').on('click', () => {
+    if ($('nav').hasClass('flexed')) {
+      $('nav').removeClass('flexed');
+    } else {
+      $('nav').addClass('flexed');
+    }
+  });
 
   //  Display functions
   module.showOnly = (selector) => {

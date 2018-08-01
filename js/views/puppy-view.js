@@ -5,16 +5,6 @@ var app = app || {};
 (function(module) {
     var puppyView = {};
 
-    puppyView.initIndexPage = () => {
-        let puppyList = app.Puppy.all;
-        app.mobileNav();
-        $('#featured-view').empty();
-        app.showOnly('#home');
-        for (var i = 0; i < 2; i++) {
-            $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
-        };    
-    };
-
 
 
 
@@ -27,7 +17,7 @@ var app = app || {};
     // }
 
     puppyView.initSearchForm = () => {
-        app.showOnly('.search-view');
+        app.showOnly('#search-view');
 
         $('#puppy-search').on('submit', function(event) {
             event.preventDefault();
@@ -36,9 +26,9 @@ var app = app || {};
                 location: event.target.zipcode.value || '',
             }
 
-            module.ShelterPuppy.find(puppy, initSearchResultsPage);
+            module.ShelterPuppy.find(puppy.location, puppyView.initSearchResultsPage);
 
-            event.target.zipcode.value = '';
+            // event.target.zipcode.value = '';
         });
     };
 
@@ -46,7 +36,8 @@ var app = app || {};
         app.showOnly('#search-results');
         $('#search-list').empty();
 
-        module.Puppy.all.forEach(puppy => $('#search-list').append(puppy.toHtml()));
+        app.ShelterPuppy.all.map(puppy => $('#search-list').append(puppy.toHtml('puppy-list-template')));
+
     }
 
     module.puppyView = puppyView;

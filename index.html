@@ -24,31 +24,30 @@
     </a>
   </script>
 
-  <script id="puppy-list-template" type="text/x-handlebars-template">
-    <a href="/breeder/puppies/{{{puppy_id}}}">
+  <script id="puppy-list-template" type="text/x-handlebars-template">  
       <figure>
-        <img src="{{image_url}}" />
+        <!-- <img src="{{image_url}}" /> -->
         <figcaption>
-            <h2>{{name}}</h2>
-            <h3>Date of birth: {{birthdate}} Gender: {{gender}}</h3>
-            <h3>{{story}}</h3>
+            <!-- <h2>{{name}}</h2>
+            <h3>Age: {{age}} Gender: {{gender}}</h3>
+            <h3>{{story}}</h3> -->
+            <h3>it worked</h3>
           </figcaption>
+          <a href="#">view details</a>
       </figure>
-    </a>
   </script>
 
-  <!-- Puppy detail template STRETCH GOAL -->
-  <!-- <script id="puppy-detail-template" type="text/x-handlebars-template">
-    <div>
-      <img src="{{image_url}}"> 
-      <div>
-          <h2>{{name}}</h2>
-          <h3>{{gender}}</h3>
-          <h3>Date of birth: {{birthdate}}</h3>
-          <p>{{story}}</p>
-      </div>                     
-    </div>
-  </script> -->
+  <script id="puppy-detail-template" type="text/x-handlebars-template">  
+      <figure>
+        <!-- google maps image (may just turn to div) -->
+        <img src="" />
+        <figcaption>
+            <h2>{{city}}, {{state}}</h2>
+            <h3>{{street}}</h3>
+            <h3>{{phone}}</h3>
+          </figcaption>
+      </figure>
+  </script>
 
 </head>
 
@@ -99,6 +98,19 @@
 
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.214507788373!2d-122.35406864230781!3d47.61829891952586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153758c88a61%3A0xe3d3fd29c55db518!2sCode+Fellows!5e0!3m2!1sen!2sus!4v1530221315808"
         width="1020" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+    <section id="search-view" class="js-container">
+      <form id="puppy-search">
+        <label>
+            <input type="text" name="zipcode">Enter zip code for dog location
+        </label>
+        <button type="submit">search</button>
+      </form>
+
+      <div id="search-results">
+
+      </div>
     </section>
 
 <!-- Application to SPA -->
@@ -294,6 +306,7 @@
 
   <script src="js/index.js"></script>
   <script src="js/models/puppy.js"></script>
+  <script src="js/models/petfinder.js"></script>
   <script src="js/views/puppy-view.js"></script>
   <script src="js/views/breeder-view.js"></script>
   <script src="js/views/application-view.js"></script>
