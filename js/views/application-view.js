@@ -3,10 +3,10 @@
 var firstName, lastName, middleName, prefix, suffix, button;
 
 // need to get elements by ID 
-firstName = document.getElementById('firstName');
+  //firstName = document.getElementById('firstName');
 // need to create an event listener function
-button = document.getElementById('button');
-button.addEventListener(click, Person.addPerson);
+  //button = document.getElementById('button');
+  //button.addEventListener.on(click, Person.addPerson);
 
 // create callback function
 // need to push info as new Person

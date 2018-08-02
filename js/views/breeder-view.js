@@ -5,13 +5,20 @@ var app = app || {};
 (function(module) {
   var breederView = {};
 
+  breederView.initWhelpingPage = (ctx, next) => {
+    $('#whelping-box').empty();
+    app.showOnly('#whelping-container');
+    module.Puppy.all.forEach(puppy => $('#whelping-box').append(puppy.toHtml()));
+    next();
+  };
+
   breederView.initIndexPage = () => {
-      let puppyList = app.Puppy.all;
-      $('#featured-view').empty();
-      app.showOnly('#home');
-      for (var i = 0; i < 2; i++) {
-          $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
-      };    
+    let puppyList = app.Puppy.all;
+    $('#featured-view').empty();
+    app.showOnly('#home');
+    for (var i = 0; i < 2; i++) {
+      $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
+    }
   };
 
   breederView.initBreederForm = () => {
@@ -31,7 +38,3 @@ var app = app || {};
 
   module.breederView = breederView;
 })(app);
-
-
-
-
