@@ -6,11 +6,11 @@ var app = app || {};
   var breederView = {};
 
   breederView.initWhelpingPage = (ctx, next) => {
-    $('#book-list').empty();
-    app.showOnly('.book-view');
-    module.Book.all.forEach(book => $('#book-list').append(book.toHtml()));
+    $('#whelping-box').empty();
+    app.showOnly('#whelping-container');
+    module.Puppy.all.forEach(puppy => $('#whelping-box').append(puppy.toHtml()));
     next();
-  }
+  };
 
   breederView.initIndexPage = () => {
     let puppyList = app.Puppy.all;
