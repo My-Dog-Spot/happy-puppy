@@ -5,16 +5,6 @@ var app = app || {};
 (function(module) {
     var puppyView = {};
 
-    puppyView.initIndexPage = () => {
-        let puppyList = app.Puppy.all;
-        app.mobileNav();
-        $('#featured-view').empty();
-        app.showOnly('#home');
-        for (var i = 0; i < 2; i++) {
-            $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
-        };    
-    };
-
 
 
 
@@ -27,7 +17,7 @@ var app = app || {};
     // }
 
     puppyView.initSearchForm = () => {
-        app.showOnly('.search-view');
+        app.showOnly('#search-view');
 
         $('#puppy-search').on('submit', function(event) {
             event.preventDefault();
@@ -36,18 +26,35 @@ var app = app || {};
                 location: event.target.zipcode.value || '',
             }
 
-            module.ShelterPuppy.find(puppy, initSearchResultsPage);
+            module.ShelterPuppy.find(puppy.location, puppyView.initSearchResultsPage);
 
             event.target.zipcode.value = '';
         });
     };
 
     puppyView.initSearchResultsPage = () => {
-        app.showOnly('#search-results');
         $('#search-list').empty();
+        puppyView.setTeasers();
+        app.ShelterPuppy.all.forEach(puppy => $('#search-results').append(puppy.toHtml('puppy-list-template')));
 
-        module.Puppy.all.forEach(puppy => $('#search-list').append(puppy.toHtml()));
     }
+
+    puppyView.setTeasers = () => {
+        $('.story-body *:nth-of-type(n+2)').hide();
+        $('section').on('click', 'a.read-on', function(e) {
+          e.preventDefault();
+          if ($(this).text() === 'Read on →') {
+            $(this).parent().find('*').fadeIn();
+            $(this).html('Show Less &larr;');
+          } else {
+            $('body').animate({
+              scrollTop: ($(this).parent().offset().top)
+            },200);
+            $(this).html('Read on &rarr;');
+            $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+          }
+        });
+      };
 
     module.puppyView = puppyView;
 })(app);
