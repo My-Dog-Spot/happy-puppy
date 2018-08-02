@@ -26,11 +26,11 @@ var app = app || {};
       .then(() => page('/'))
       .catch(errorCallback);
 
-  Puppy.fetchAll = callback => 
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/puppies`)  
-    .then(Puppy.loadAll)
-    .then(callback)
-    .catch(console.error);
+  Puppy.fetchAll = callback =>
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/puppies`)
+      .then(Puppy.loadAll)
+      .then(callback)
+      .catch(console.error);
 
   module.Puppy = Puppy;
 })(app);

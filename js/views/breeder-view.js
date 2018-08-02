@@ -6,12 +6,12 @@ var app = app || {};
   var breederView = {};
 
   breederView.initIndexPage = () => {
-      let puppyList = app.Puppy.all;
-      $('#featured-view').empty();
-      app.showOnly('#home');
-      for (var i = 0; i < 2; i++) {
-          $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
-      };    
+    let puppyList = app.Puppy.all;
+    $('#featured-view').empty();
+    app.showOnly('#home');
+    for (var i = 0; i < 2; i++) {
+      $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
+    }
   };
 
   breederView.initBreederForm = () => {
