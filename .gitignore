@@ -37,6 +37,7 @@ github-token.txt
 petfinder-api-access.pdf
 test-google-api.html
 *.pdf
+misc.xml
 
 # Created by https://www.gitignore.io/api/node,macos,linux,windows
 
