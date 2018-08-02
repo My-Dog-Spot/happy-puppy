@@ -28,17 +28,33 @@ var app = app || {};
 
             module.ShelterPuppy.find(puppy.location, puppyView.initSearchResultsPage);
 
-            // event.target.zipcode.value = '';
+            event.target.zipcode.value = '';
         });
     };
 
     puppyView.initSearchResultsPage = () => {
-        app.showOnly('#search-results');
         $('#search-list').empty();
-
-        app.ShelterPuppy.all.map(puppy => $('#search-list').append(puppy.toHtml('puppy-list-template')));
+        puppyView.setTeasers();
+        app.ShelterPuppy.all.forEach(puppy => $('#search-results').append(puppy.toHtml('puppy-list-template')));
 
     }
+
+    puppyView.setTeasers = () => {
+        $('.story-body *:nth-of-type(n+2)').hide();
+        $('section').on('click', 'a.read-on', function(e) {
+          e.preventDefault();
+          if ($(this).text() === 'Read on →') {
+            $(this).parent().find('*').fadeIn();
+            $(this).html('Show Less &larr;');
+          } else {
+            $('body').animate({
+              scrollTop: ($(this).parent().offset().top)
+            },200);
+            $(this).html('Read on &rarr;');
+            $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+          }
+        });
+      };
 
     module.puppyView = puppyView;
 })(app);
