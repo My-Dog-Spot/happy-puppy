@@ -5,6 +5,13 @@ var app = app || {};
 (function(module) {
   var breederView = {};
 
+  breederView.initWhelpingPage = (ctx, next) => {
+    $('#book-list').empty();
+    app.showOnly('.book-view');
+    module.Book.all.forEach(book => $('#book-list').append(book.toHtml()));
+    next();
+  }
+
   breederView.initIndexPage = () => {
     let puppyList = app.Puppy.all;
     $('#featured-view').empty();
@@ -31,7 +38,3 @@ var app = app || {};
 
   module.breederView = breederView;
 })(app);
-
-
-
-
