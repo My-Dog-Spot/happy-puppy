@@ -24,7 +24,7 @@ var app = app || {};
 
             let puppy = {
                 location: event.target.zipcode.value || '',
-            }
+            };
 
             module.ShelterPuppy.find(puppy.location, puppyView.initSearchResultsPage);
 

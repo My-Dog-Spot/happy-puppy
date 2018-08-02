@@ -24,21 +24,22 @@
     </a>
   </script>
 
-  <script id="puppy-list-template" type="text/x-handlebars-template">  
+  <script id="puppy-list-template" type="text/x-handlebars-template">
       <figure class="margin-bot">
         <img src="{{image_url}}" />
         <figcaption>
             <h2>{{name}}</h2>
             <h3>Age: {{age}} Gender: {{gender}}</h3>
-            <h3>{{contactLocation}}</h3>
-            <p class="short-story">{{story}}</p>
-            <p class="full-story">{{story}}</p>
+            <h3>{{city}} {{state}}</h3>
+            <p class="story-body">{{story}}</p>
+            <a href="#" class="read-on">Read on &rarr;</a>
+          <img id="location-map" src="{{locationMap}}" alt="The google map showing the shelter or contact location">
           </figcaption>
           <a href="#">view details</a>
       </figure>
   </script>
 
-  <script id="puppy-detail-template" type="text/x-handlebars-template">  
+  <script id="puppy-detail-template" type="text/x-handlebars-template">
       <figure>
         <!-- google maps image (may just turn to div) -->
         <img src="" />
@@ -55,17 +56,17 @@
 <body>
   <header>
     <div class="header-content">
-      <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-      <a class="icon-menu" id="menu" href="#"></a> 
-    </div> 
-     
+      <img class="brand-logo" src="img/dog-316930__340_trifold.jpg">
+      <a class="icon-menu" id="menu" href="#"></a>
+    </div>
+
     <nav>
-      <a href="/">Home</a> 
+      <a href="/">Home</a>
       <a href="/breeder/puppies">Whelping Box</a>
       <a href="/puppies">Search Shelter Puppies</a>
       <a href="/about">About</a>
       <a href="/contact-us">Contact Us</a>
-      <a href="/puppies/application">Application</a>      
+      <a href="/puppies/application">Application</a>
     </nav>
   </header>
 
@@ -84,7 +85,7 @@
       <div id="featured-view">
         <!-- Template for featured puppies will render here -->
       </div>
-      
+
     </section>
 
 <!-- Contact info to SPA -->
@@ -118,28 +119,28 @@
 
     <section class="container js-container" id="puppy-application">
       <h1> Let's get your application for a new Puppy Started!</h1>
-      <form id="puppy-application">
+      <form id="puppy-application-form">
         <fieldset>
           <!-- All fields are required -->
           <label for="firstName">First Name:</label>
-          <input name="firstName" type="text" required>
+          <input id="firstName" type="text" required>
 
           <label for="middleName">Middle Name :</label>
-          <input name="middleName" type="text" required>
+          <input id="middleName" type="text" required>
 
           <label for="lastName"> Last Name:</label>
-          <input name="lastName" type=" text" required>
+          <input id="lastName" type="text" required>
           <!-- dropdown box for prefix -->
           <label for="prefix"> Prefix:</label>
-          <select name="prefix" type=" dropdown" required>
-            <option value=: "Mr">Mr.</option>
-            <option value=: "Mrs"> Mrs.</option>
+          <select id="prefix" required>
+            <option value=:"Mr">Mr.</option>
+            <option value=:"Mrs"> Mrs.</option>
           </select>
           <!-- drop down box for suffix -->
           <label for="suffix"> Suffix:</label>
-          <select name="suffix" required>
-            <option value=: "None">None.</option>
-            <option value=: "Jr."> Jr.</option>
+          <select id="suffix" required>
+            <option value=:"None">None.</option>
+            <option value=:"Jr."> Jr.</option>
           </select>
           <button id="button"> Apply for my Puppy</button>
         </fieldset>
@@ -179,7 +180,6 @@
     <section class="container js-container" id="about">
       <h1>Get to Know Who We Are</h1>
       <ol>
-        <div class="about">
           <li>
             <h3>David Hull</h3>
             <img src="img/davidHullPortrait.jpg">
@@ -193,10 +193,6 @@
               </p>
             </section>
           </li>
-        </div>
-        <hr>
-
-        <div class="about">
           <li>
             <h3>Cheyna Humphries</h3>
             <img src="img/cheynaHumphriesPortrait.jpg">
@@ -209,9 +205,6 @@
               that I have been able to implement into this project and with that I have these great team members to help
               me along the way!</p>
           </li>
-        </div>
-        <hr>
-        <div class="about">
           <li>
             <h3>Brandon Haynes</h3>
             <img src="img/brandonHaynesPortrait.jpg">
@@ -222,9 +215,6 @@
               for creative problem solving. I enjoy the process of learning to understand complex systems, and then plying
               that knowledge to impact those systems in helpful ways.</p>
           </li>
-        </div>
-        <hr>
-        <div class="about">
           <li>
             <h3>Matthew Brown</h3>
             <img src="img/matthewBrownPortrait.jpg">
@@ -235,9 +225,6 @@
               from my previous employment. I am now chasing a dream of becoming a software developer which is far more inline
               with my love for puzzles and language learning. Please checkout our GitHub pages for additional content. </p>
           </li>
-        </div>
-        <hr>
-        <div class="about">
           <li>
             <h3>J Christie</h3>
             <img src="img/jChristiePortrait.jpg">
@@ -250,7 +237,6 @@
               set at CodeFellows.</p>
           </li>
       </ol>
-      </div>
       <hr>
     </section>
 
@@ -258,7 +244,7 @@
 
     <section id="whelping-box" class="js-container">
       <h1> Here are our puppies! </h1>
-      
+
       <div id="whelping-box-list"></div>
     </section>
 
@@ -269,7 +255,7 @@
     <section>
       <div>
         <h2> Copyright (c) 2018 My-Dog-Spot </h2>
-        <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
+        <img class="brand-logo" src="img/dog-316930__340_trifold.jpg">
         <br />
       </div>
       <div>
