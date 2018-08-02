@@ -24,7 +24,7 @@
     </a>
   </script>
 
-  <script id="puppy-list-template" type="text/x-handlebars-template">
+  <script id="shelter-pet-list-template" type="text/x-handlebars-template">
       <figure class="margin-lg-bot">
         <img src="{{image_url}}" />
         <figcaption>
@@ -37,14 +37,13 @@
       </figure>
   </script>
 
-  <script id="puppy-detail-template" type="text/x-handlebars-template">
+  <script id="breeder-puppy-list-template" type="text/x-handlebars-template">
       <figure>
-        <!-- google maps image (may just turn to div) -->
-        <img src="" />
+        <img src="{{image_url}}" />
         <figcaption>
-            <h2>{{city}}, {{state}}</h2>
-            <h3>{{street}}</h3>
-            <h3>{{phone}}</h3>
+            <h2>{{name}}, {{gender}}</h2>
+            <h3>{{birthdate}}</h3>
+            <h3>{{story}}</h3>
           </figcaption>
       </figure>
   </script>
@@ -242,10 +241,7 @@
 
     <section id="whelping-box" class="js-container">
       <h1> Here are our puppies! </h1>
-
-      <div id="whelping-box-list"></div>
     </section>
-
 
   </main>
 
