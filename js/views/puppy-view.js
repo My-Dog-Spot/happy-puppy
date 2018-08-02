@@ -5,17 +5,6 @@ var app = app || {};
 (function(module) {
     var puppyView = {};
 
-
-
-
-    // TYLER - This is a potential function for breeder puppy details; STRETCH GOAL
-    // puppyView.initPuppyDetail = context => {
-    //     let singlePuppy = new app.Puppy(context);
-    //     $('#puppy-detail').empty();
-    //     app.showOnly('#puppy-detail');
-    //     $('#puppy-detail').append(singlePuppy.toHtml('puppy-detail-template'));
-    // }
-
     puppyView.initSearchForm = () => {
         app.showOnly('#search-view');
 
@@ -24,19 +13,17 @@ var app = app || {};
 
             let puppy = {
                 location: event.target.zipcode.value || '',
-            }
+            };
 
             module.ShelterPuppy.find(puppy.location, puppyView.initSearchResultsPage);
 
-            // event.target.zipcode.value = '';
+            event.target.zipcode.value = '';
         });
     };
 
     puppyView.initSearchResultsPage = () => {
-        app.showOnly('#search-results');
         $('#search-list').empty();
-
-        app.ShelterPuppy.all.map(puppy => $('#search-list').append(puppy.toHtml('puppy-list-template')));
+        app.ShelterPuppy.all.forEach(puppy => $('#search-results').append(puppy.toHtml('puppy-list-template')));
 
     }
 

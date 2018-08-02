@@ -32,6 +32,20 @@ nav a:hover {
     text-decoration: none;
 }
 
+/* Search form */
+
+.search-field {
+    width: 100%;
+}
+
+.search-btn {
+    width: 100%;
+    background-color:#edc683;
+    color:#6b515b;
+    font-weight: bold;
+    padding: 3%;
+    margin-top: 3%;
+}
 
 /* Top level content */
 
@@ -47,6 +61,13 @@ nav a:hover {
 
 .text-center {
     text-align: center;
+}
+
+.margin-bot {
+    margin-bottom: 5%;
+}
+.margin-lg-bot {
+    margin-bottom: 15%;
 }
 
 @media only screen and (min-width:600px){

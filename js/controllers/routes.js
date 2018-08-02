@@ -17,7 +17,7 @@ page('/contact-us'
   , context => app.businessView.initContactPage(context)
 );
 page('/puppies/application'
-  , context => app.puppyView.initPuppyAppForm(context)
+  , context => app.applicationView.initPuppyAppForm(context)
 );
 
 // Breeder routes
@@ -30,6 +30,6 @@ page('/breeder/puppies'
 //   , context => app.breederView.initBreederPuppyDetail(context)
 // );
 
-page('/breeder/puppies/new', context => app.Puppy.fetchOne(context, app.breederView.initBreederForm));
+page('/breeder/puppies/new', context =>  app.breederView.initBreederForm(context));
 
 page();
