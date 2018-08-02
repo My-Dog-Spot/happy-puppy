@@ -39,22 +39,23 @@ var app = app || {};
 
     }
 
-    puppyView.setTeasers = () => {
-        $('.story-body *:nth-of-type(n+2)').hide();
-        $('section').on('click', 'a.read-on', function(e) {
-          e.preventDefault();
-          if ($(this).text() === 'Read on →') {
-            $(this).parent().find('*').fadeIn();
-            $(this).html('Show Less &larr;');
-          } else {
-            $('body').animate({
-              scrollTop: ($(this).parent().offset().top)
-            },200);
-            $(this).html('Read on &rarr;');
-            $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
-          }
-        });
-      };
-
     module.puppyView = puppyView;
 })(app);
+
+
+
+// let content = $(this).parent($('.story-body'));
+// let contentText = content.text();
+// event.preventDefault();
+
+
+// if ($(this).text().includes('read less')) {
+    
+//     $(this).prev($('.story-body')).html(`${contentText.match(thirdPeriod)}...`);
+//     $('.read-more').html('read more &darr;');
+    
+// } else if ($(this).text().includes('read more')) {
+//     content.empty();
+//     $(this).prev($('.story-body')).text(contentText);
+//     $('.read-more').html('read less &uarr;');
+// }
