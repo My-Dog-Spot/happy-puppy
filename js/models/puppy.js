@@ -11,6 +11,8 @@ var app = app || {};
 
   function Puppy(rawPuppyObj) {
     Object.keys(rawPuppyObj).forEach(key => this[key] = rawPuppyObj[key]);
+    let myRegex = /^.{10}/g;
+    this.birthdate = myRegex.exec(this.birthdate);
   }
 
   Puppy.all = [];
