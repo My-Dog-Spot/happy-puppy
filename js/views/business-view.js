@@ -3,7 +3,7 @@
 var app = app || {};
 
 (function(module) {
-    var businessView = {};
+    let businessView = {};
 
     businessView.initContactPage = () => {
         app.showOnly('#contact-info');

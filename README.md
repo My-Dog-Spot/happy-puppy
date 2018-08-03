@@ -64,3 +64,6 @@ We are using the petfinder api with permission and according to the terms specif
 ##### Powered by Petfinder.com
 ##### www.petfinder.com
 
+## Google Static Map API
+The maps showing the location of animal shelters are powered by Google.
+https://developers.google.com/maps/documentation/maps-static/intro
