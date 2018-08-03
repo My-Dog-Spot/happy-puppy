@@ -33,7 +33,7 @@ var app = app || {};
   };
 
   ShelterPuppy.find = (postalCode, callback) => {
-    $.get(`http://api.petfinder.com/pet.find?key=7d4d266f8529bb64239eba2ebbd5eba2&format=json&location=${postalCode}&animal=dog`)
+    $.get(`https://api.petfinder.com/pet.find?key=7d4d266f8529bb64239eba2ebbd5eba2&format=json&location=${postalCode}&animal=dog`)
       .then((data) => data.petfinder.pets.pet)
       .then(ShelterPuppy.loadAll)
       .then(callback)
