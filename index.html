@@ -14,20 +14,18 @@
   <link rel="stylesheet" href="css/modules.css">
   <!-- Handlebars templates -->
   <script id="featured-puppy-template" type="text/x-handlebars-template">
-    <a href="/breeder/puppies/{{{puppy_id}}}">
-      <figure>
+      <figure class="col-6 padding-desk feature">
         <img src="{{image_url}}" />
         <figcaption>
           <h2>{{name}}</h2>
         </figcaption>
       </figure>
-    </a>
   </script>
 
   <script id="shelter-pet-list-template" type="text/x-handlebars-template">
       <figure class="margin-lg-bot">
-        <img src="{{image_url}}" />
-        <figcaption>
+        <img src="{{image_url}}" class="col-3"/>
+        <figcaption class="col-6">
             <h2>{{name}}</h2>
             <h3>Age: {{age}} Gender: {{gender}}</h3>
             <h3>{{city}} {{state}}</h3>
@@ -38,9 +36,9 @@
   </script>
 
   <script id="breeder-puppy-list-template" type="text/x-handlebars-template">
-      <figure>
-        <img src="{{image_url}}" />
-        <figcaption>
+      <figure class="clearfix margin-bot">
+        <img src="{{image_url}}" class="col-3"/>
+        <figcaption class="col-6 padding-left-desk">
             <h2>{{name}}, {{gender}}</h2>
             <h3>{{birthdate}}</h3>
             <h3>{{story}}</h3>
@@ -54,7 +52,7 @@
   <header>
     <div class="header-content">
       <img class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-      <a class="icon-menu" id="menu" href="#"></a>
+      <a class="icon-menu desktop-hide" id="menu" href="#"></a>
     </div>
 
     <nav>
@@ -71,16 +69,16 @@
   <main>
 <!-- Home to SPA -->
     <section id="home" class="container js-container">
-      <div class="headliner">
+      <div class="headliner clearfix">
         <h1>The House of Code Fellows Scotties</h1>
-        <img src="img/3scottish_terriers_400x246.jpg">
-        <p>Welcome to Code Fellows Scotties! Here we breed, raise and sell Scottie dogs that will make for a perfect companion!
+        <img src="img/3scottish_terriers_400x246.jpg" class="col-6">
+        <p class="col-6 padding-left-desk">Welcome to Code Fellows Scotties! Here we breed, raise and sell Scottie dogs that will make for a perfect companion!
           Feel free to take a look around our site and check out our featured dogs below! If you like what you see let us
           know.</p>
       </div>
 
       <h2>Featured Dogs</h2>
-      <div id="featured-view">
+      <div id="featured-view" class="clearfix">
         <!-- Template for featured puppies will render here -->
       </div>
 
@@ -94,16 +92,16 @@
         <br> Fax Number: 253-867-5309</p>
       <p>Hours: Monday - Saturday 9AM to 8PM
         <br> Sunday 10PM-6PM</p>
-      <p>Address: 2901 3rd Ave #300, Seattle, WA 98121</p>
+      <p class="margin-bot">Address: 2901 3rd Ave #300, Seattle, WA 98121</p>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.214507788373!2d-122.35406864230781!3d47.61829891952586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153758c88a61%3A0xe3d3fd29c55db518!2sCode+Fellows!5e0!3m2!1sen!2sus!4v1530221315808"
-        width="1020" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.214507788373!2d-122.35406864230781!3d47.61829891952586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153758c88a61%3A0xe3d3fd29c55db518!2sCode+Fellows!5e0!3m2!1sen!2sus!4v1530221315808"
+         height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 
-    <section id="search-view" class="js-container container">
-      <form id="puppy-search" class="margin-bot">
+    <section id="search-view" class="js-container container clearfix">
+      <form id="puppy-search" class="margin-bot clearfix search-form">
         <label>
-            <input type="text" name="zipcode" class="search-field">Enter zip code for dog location
+            <input type="text" name="zipcode" class="search-field" placeholder="Enter zip code for dog location">
         </label>
         <button type="submit" class="search-btn">search</button>
       </form>
@@ -177,10 +175,10 @@
 
     <section class="container js-container" id="about">
       <h1>Get to Know Who We Are</h1>
-      <ol>
-          <li>
+      <ol class="about-list">
+          <li class="margin-bot">
             <h3>David Hull</h3>
-            <img src="img/davidHullPortrait.jpg">
+            <img src="img/davidHullPortrait.jpg" class="about-list-img">
             <a href="https://www.linkedin.com/in/davidehull/" target="_blank">
               <img src="img/In-2C-28px-TM.png">
             </a>
@@ -191,9 +189,28 @@
               </p>
             </section>
           </li>
-          <li>
+          <li class="margin-bot">
+              <h3>J Christie</h3>
+              <img src="img/jChristiePortrait.jpg" class="about-list-img">
+              <a href="https://www.linkedin.com/in/j-christie-028266161/" target="_blank">
+                <img src="img/In-2C-28px-TM.png">
+              </a>
+              <p>I am an avid rock climber and bread baker. I am an Army Veteran with a colorful background of experinces ranging
+                from working after school programs with children to being a dirtbag climber to a father and into being a student.
+                I love solving problems and cultivating resources to make that happen efficiently and am building that tool
+                set at CodeFellows.</p>
+            </li>
+            <li class="margin-bot">
+                <h3>Tyler Anyan</h3>
+                <img src="img/tyler-anyan.jpeg" class="about-list-img">
+                <a href="https://www.linkedin.com/in/tyleranyan/" target="_blank">
+                  <img src="img/In-2C-28px-TM.png">
+                </a>
+                <p>I play some music, I build the interweb. I love me some Seahawks. Avid backpacker and generally outdoorsy. I have a lengthy background in graphic design, marketing, and front end development. Definite star wars geek; Luke Skywalker died for our sins (spoiler alert). I love the thrill of solving a problem, and am extremely tenacious in pursuit of said solutions.</p>
+              </li>
+          <li class="margin-bot">
             <h3>Cheyna Humphries</h3>
-            <img src="img/cheynaHumphriesPortrait.jpg">
+            <img src="img/cheynaHumphriesPortrait.jpg" class="about-list-img">
             <a href="https://www.linkedin.com/in/cheynahumphries/" target="_blank">
               <img src="img/In-2C-28px-TM.png">
             </a>
@@ -203,9 +220,9 @@
               that I have been able to implement into this project and with that I have these great team members to help
               me along the way!</p>
           </li>
-          <li>
+          <li class="margin-bot">
             <h3>Brandon Haynes</h3>
-            <img src="img/brandonHaynesPortrait.jpg">
+            <img src="img/brandonHaynesPortrait.jpg" class="about-list-img">
             <a href="https://www.linkedin.com/in/brandonautomation/" target="_blank">
               <img src="img/In-2C-28px-TM.png">
             </a>
@@ -215,7 +232,7 @@
           </li>
           <li>
             <h3>Matthew Brown</h3>
-            <img src="img/matthewBrownPortrait.jpg">
+            <img src="img/matthewBrownPortrait.jpg" class="about-list-img">
             <a href="https://www.linkedin.com/in/mthwbrwn/" target="_blank">
               <img src="img/In-2C-28px-TM.png">
             </a>
@@ -223,63 +240,41 @@
               from my previous employment. I am now chasing a dream of becoming a software developer which is far more inline
               with my love for puzzles and language learning. Please checkout our GitHub pages for additional content. </p>
           </li>
-          <li>
-            <h3>J Christie</h3>
-            <img src="img/jChristiePortrait.jpg">
-            <a href="https://www.linkedin.com/in/j-christie-028266161/" target="_blank">
-              <img src="img/In-2C-28px-TM.png">
-            </a>
-            <p>I am an avid rock climber and bread baker. I am an Army Veteran with a colorful background of experinces ranging
-              from working after school programs with children to being a dirtbag climber to a father and into being a student.
-              I love solving problems and cultivating resources to make that happen efficiently and am building that tool
-              set at CodeFellows.</p>
-          </li>
       </ol>
       <hr>
     </section>
 
 <!-- Whelping-Box to SPA -->
 
-    <section id="whelping-container" class="js-container">
+    <section id="whelping-container" class="js-container container">
       <h1> Here are our puppies! </h1>
       <div id="whelping-box"></div>
     </section>
 
   </main>
 
-  <footer>
-    <section>
-      <div>
-        <h2> Copyright (c) 2018 My-Dog-Spot </h2>
-        <img class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-        <br />
+  <footer class="container">
+    <section>       
+      <div class="margin-bot footer-nav">
+          <a href="/">Home</a>
+          <a href="/breeder/puppies">Whelping Box</a>
+          <a href="/breeder/puppies/new">Breeders add a puppy</a>
+          <a href="/puppies">Search Shelter Puppies</a>
+          <a href="/about">About</a>
+          <a href="/contact-us">Contact Us</a>
+          <a href="/puppies/application">Application</a>
       </div>
-      <div>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="whelping-box.html">Whelping Box</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="contactUs.html">Contact Us</a>
-          </li>
-          <li>
-            <a href="application.html">Application</a>
-          </li>
-        </ul>
+      <div class="flexed margin-bot market">
+        <img src="img/dog-316930__340_trifold.jpg">
+        <div class="github">
+          <a target="_blank" href="https://github.com/My-Dog-Spot">
+            <img src="img/Octocat.jpg" width="50px" id="github-logo" alt="an octocat Github logo"> </a>
+          <a href="https://github.com/My-Dog-Spot">
+            <h6>Click here to visit our github page</h6>
+          </a>
+        </div>
       </div>
-      <div>
-        <a target="_blank" href="https://github.com/My-Dog-Spot">
-          <img src="img/Octocat.jpg" width="50px" id="github-logo" alt="an octocat Github logo"> </a>
-        <a href="https://github.com/My-Dog-Spot">
-          <h6>Click here to visit our github page</h6>
-        </a>
-      </div>
+      <h5> Copyright (c) 2018 My-Dog-Spot </h5>
     </section>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
