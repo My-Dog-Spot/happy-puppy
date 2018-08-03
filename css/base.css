@@ -1,5 +1,6 @@
 h1,h2,h3,h4 {
     font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1%;
 }
 
 h1 {
@@ -25,4 +26,8 @@ img {
 .container {
     padding: 3%;
     margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
 }

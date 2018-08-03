@@ -32,6 +32,32 @@ nav a:hover {
     text-decoration: none;
 }
 
+/* footer styles */
+
+footer {
+    background-color: rgb(107, 81, 91);
+    color: rgb(237, 198, 131);
+    text-align: center;
+}
+
+footer img {
+    max-width: 30%;
+}
+
+.footer-nav a {
+    color:  rgb(237, 198, 131);
+    margin: 1%;
+    display: inline-block;
+}
+
+.github {
+    padding-left: 3%;
+}
+
+.github a {
+    color: rgb(237, 198, 131);
+}
+
 /* Search form */
 
 .search-field {
@@ -53,6 +79,10 @@ nav a:hover {
     padding-bottom: 15%;
 }
 
+.about-list-img {
+    width: 20%;
+}
+
 /* Helper classes */
 
 .flexed {
@@ -70,6 +100,104 @@ nav a:hover {
     margin-bottom: 15%;
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 @media only screen and (min-width:600px){
-/* TODO: Desktop styling section. */
+    .market {
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .desktop-hide {
+        display: none;
+    }
+
+    .footer-nav {
+        margin-bottom: 1%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        transition: all ease .25s;
+    }
+    
+    nav a {
+        background-color: transparent;
+        color: rgb(237, 198, 131);
+        text-decoration: none;
+        font-size: 1.25em;
+    }
+
+    nav a:hover {
+        color: rgb(172, 136, 130);
+        background-color: transparent;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+    .headliner {
+        padding-bottom: 5%;
+    }
+
+    .iframe-map {
+        width: 100%;
+    }
+
+    .padding-left-desk {
+        padding-left: 3%;
+    }
+
+    .padding-desk {
+        padding: 3%;
+    }
+
+    .feature:first-of-type {
+        padding-left: 0;
+    }
+
+    .search-field {
+        width: 60%;
+        float: left;
+    }
+
+    .search-form {
+        padding: 0 15%;
+    }
+
+    .search-btn {
+        width: 30%;
+        padding: 1%;
+        float: left;
+        margin: 0;
+        margin-left: 3%;
+    }
+
+    #add-puppy-form button {
+        width: 30%;
+        padding: 1%;
+        background-color:#edc683;
+        color:#6b515b;
+    }
+
+    #add-puppy-form input {
+        margin: 0 1% 1% 0;
+        width: 48%;
+    }
+
+    #add-puppy-form textarea {
+        width: 100%;
+        margin-bottom: 1%;
+    }
+
+    .about-list-img {
+        width: 10%;
+    }
 }
