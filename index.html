@@ -6,92 +6,289 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/678b697ff9/UntitledProject/style.css"> -->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="css/vendor/icons/icons.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/modules.css">
+  <!-- Handlebars templates -->
+  <script id="featured-puppy-template" type="text/x-handlebars-template">
+      <figure class="col-6 padding-desk feature">
+        <img src="{{image_url}}" />
+        <figcaption>
+          <h2>{{name}}</h2>
+        </figcaption>
+      </figure>
+  </script>
+
+  <script id="shelter-pet-list-template" type="text/x-handlebars-template">
+      <figure class="margin-lg-bot">
+        <img src="{{image_url}}" class="col-3"/>
+        <figcaption class="col-6">
+            <h2>{{name}}</h2>
+            <h3>Age: {{age}} Gender: {{gender}}</h3>
+            <h3>{{city}} {{state}}</h3>
+            <p class="story-body margin-bot">{{story}}</p>
+          <img id="location-map" src="{{locationMap}}" alt="The google map showing the shelter or contact location">
+          </figcaption>
+      </figure>
+  </script>
+
+  <script id="breeder-puppy-list-template" type="text/x-handlebars-template">
+      <figure class="clearfix margin-bot">
+        <img src="{{image_url}}" class="col-3"/>
+        <figcaption class="col-6 padding-left-desk">
+            <h2>{{name}}, {{gender}}</h2>
+            <h3>{{birthdate}}</h3>
+            <h3>{{story}}</h3>
+          </figcaption>
+      </figure>
+  </script>
+
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li>
-        <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-      </li>
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="whelping-box.html">Whelping Box</a>
-      </li>
-      <li>
-        <a href="about.html">About</a>
-      </li>
-      <li>
-        <a href="contactUs.html">Contact Us</a>
-      </li>
-      <li>
-        <a href="application.html">Application</a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <div class="header-content">
+      <img class="brand-logo" src="img/dog-316930__340_trifold.jpg">
+      <a class="icon-menu desktop-hide" id="menu" href="#"></a>
+    </div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/breeder/puppies">Whelping Box</a>
+      <a href="/breeder/puppies/new">Breeders add a puppy</a>
+      <a href="/puppies">Search Shelter Puppies</a>
+      <a href="/about">About</a>
+      <a href="/contact-us">Contact Us</a>
+      <a href="/puppies/application">Application</a>
+    </nav>
+  </header>
+
   <main>
-    <h1>The House of Code Fellows Scotties</h1>
-    <div class="hero-img">
-      <img src="img/3scottish_terriers_400x246.jpg">
-    </div>
-
-    <div class="hero-text">
-      <p>Welcome to Code Fellows Scotties! Here we breed, raise and sell Scottie dogs that will make for a perfect companion!
-        Feel free to take a look around our site and check out our featured dogs below! If you like what you see let us know.</p>
-    </div>
-
-  </main>
-  <main>
-    <div id="featured-left-div">
-    </div>
-    <div id="featured-right-div">
-    </div>
-  </main>
-  <!-- <hr /> -->
-
-  <footer>
-    <section>
-      <div>
-        <h2> Copyright (c) 2018 My-Dog-Spot </h2>
-        <img href="#home" class="brand-logo" src="img/dog-316930__340_trifold.jpg">
-        <br />
+<!-- Home to SPA -->
+    <section id="home" class="container js-container">
+      <div class="headliner clearfix">
+        <h1>The House of Code Fellows Scotties</h1>
+        <img src="img/3scottish_terriers_400x246.jpg" class="col-6">
+        <p class="col-6 padding-left-desk">Welcome to Code Fellows Scotties! Here we breed, raise and sell Scottie dogs that will make for a perfect companion!
+          Feel free to take a look around our site and check out our featured dogs below! If you like what you see let us
+          know.</p>
       </div>
-      <div>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="whelping-box.html">Whelping Box</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="contactUs.html">Contact Us</a>
-          </li>
-          <li>
-            <a href="application.html">Application</a>
-          </li>
-        </ul>
+
+      <h2>Featured Dogs</h2>
+      <div id="featured-view" class="clearfix">
+        <!-- Template for featured puppies will render here -->
       </div>
-      <div>
-        <a target="_blank" href="https://github.com/My-Dog-Spot">
-          <img src="img/Octocat.jpg" width="50px" id="github-logo" alt="an octocat Github logo"> </a>
-        <a href="https://github.com/My-Dog-Spot">
-          <h6>Click here to visit our github page</h6>
-        </a>
+
+    </section>
+
+<!-- Contact info to SPA -->
+    <section id="contact-info" class="container js-container">
+
+      <h1>Have Any Questions, Contact Us</h1>
+      <p>Office Phone: 253-123-4567
+        <br> Fax Number: 253-867-5309</p>
+      <p>Hours: Monday - Saturday 9AM to 8PM
+        <br> Sunday 10PM-6PM</p>
+      <p class="margin-bot">Address: 2901 3rd Ave #300, Seattle, WA 98121</p>
+
+      <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.214507788373!2d-122.35406864230781!3d47.61829891952586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153758c88a61%3A0xe3d3fd29c55db518!2sCode+Fellows!5e0!3m2!1sen!2sus!4v1530221315808"
+         height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+    <section id="search-view" class="js-container container clearfix">
+      <form id="puppy-search" class="margin-bot clearfix search-form">
+        <label>
+            <input type="text" name="zipcode" class="search-field" placeholder="Enter zip code for dog location">
+        </label>
+        <button type="submit" class="search-btn">search</button>
+      </form>
+
+      <div id="search-results">
+
       </div>
     </section>
+
+<!-- Application to SPA -->
+
+    <section class="container js-container" id="puppy-application">
+      <h1> Let's get your application for a new Puppy Started!</h1>
+      <form id="puppy-application-form">
+        <fieldset>
+          <!-- All fields are required -->
+          <label for="firstName">First Name:</label>
+          <input id="firstName" type="text" required>
+
+          <label for="middleName">Middle Name :</label>
+          <input id="middleName" type="text" required>
+
+          <label for="lastName"> Last Name:</label>
+          <input id="lastName" type="text" required>
+          <!-- dropdown box for prefix -->
+          <label for="prefix"> Prefix:</label>
+          <select id="prefix" required>
+            <option value=:"Mr">Mr.</option>
+            <option value=:"Mrs"> Mrs.</option>
+          </select>
+          <!-- drop down box for suffix -->
+          <label for="suffix"> Suffix:</label>
+          <select id="suffix" required>
+            <option value=:"None">None.</option>
+            <option value=:"Jr."> Jr.</option>
+          </select>
+          <button id="button"> Apply for my Puppy</button>
+        </fieldset>
+      </form>
+
+      <article>
+        <p> Requirements for your new puppy </p>
+        <p>Before you bring your puppy home you need be prepared for the following : </p>
+        <p> I have the space for the puppy I am considering and can provide a dedicated area solely for the new puppy </p>
+        <p>I have researched my new puppy and can provide proper care, veterinary attention and proper nutrition</p>
+        <p>This puppy is not a gift for another. I am a mature person and will provide the majority of care for my new puppy</p>
+        <p>I pledge to spay or neuter my puppy </p>
+        <P>I will follow up with proper registration, maintain an ID tag and will microchip my new puppy. </P>
+      </article>
+    </section>
+
+    <!-- To display puppy detail view STRETCH GOAL -->
+    <!-- <section id="puppy-detail" class="js-container">
+
+    </section> -->
+
+    <!-- Breeder form to add new puppy -->
+    <section id="add-puppy" class="js-container container">
+        <h1>Add a new puppy</h1>
+      <form id="add-puppy-form" >
+        <input type="text" name="name" placeholder="your puppie's name">
+        <input type="text" name="gender" placeholder="your puppie's gender">
+        <input type="text" name="birthdate" placeholder="your puppie's birthdate">
+        <input type="text" name="image_url" placeholder="add an image of your puppy">
+        <textarea name="story" placeholder="tell us about your puppy" cols="30" rows="5"></textarea>
+        <button type="submit">submit</button>
+      </form>
+    </section>
+
+<!-- About to SPA -->
+
+    <section class="container js-container" id="about">
+      <h1>Get to Know Who We Are</h1>
+      <ol class="about-list">
+          <li class="margin-bot">
+            <h3>David Hull</h3>
+            <img src="img/davidHullPortrait.jpg" class="about-list-img">
+            <a href="https://www.linkedin.com/in/davidehull/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <section class="paragraph">
+              <p>Hi! This site is the end product of our team going through an introductory programming course at Code Fellows
+                in Seattle. It's been a terrific experience, and I'm excited to continue learning and building even more
+                exciting solutions. Please send inquires via LinkedIn messaging.
+              </p>
+            </section>
+          </li>
+          <li class="margin-bot">
+              <h3>J Christie</h3>
+              <img src="img/jChristiePortrait.jpg" class="about-list-img">
+              <a href="https://www.linkedin.com/in/j-christie-028266161/" target="_blank">
+                <img src="img/In-2C-28px-TM.png">
+              </a>
+              <p>I am an avid rock climber and bread baker. I am an Army Veteran with a colorful background of experinces ranging
+                from working after school programs with children to being a dirtbag climber to a father and into being a student.
+                I love solving problems and cultivating resources to make that happen efficiently and am building that tool
+                set at CodeFellows.</p>
+            </li>
+            <li class="margin-bot">
+                <h3>Tyler Anyan</h3>
+                <img src="img/tyler-anyan.jpeg" class="about-list-img">
+                <a href="https://www.linkedin.com/in/tyleranyan/" target="_blank">
+                  <img src="img/In-2C-28px-TM.png">
+                </a>
+                <p>I play some music, I build the interweb. I love me some Seahawks. Avid backpacker and generally outdoorsy. I have a lengthy background in graphic design, marketing, and front end development. Definite star wars geek; Luke Skywalker died for our sins (spoiler alert). I love the thrill of solving a problem, and am extremely tenacious in pursuit of said solutions.</p>
+              </li>
+          <li class="margin-bot">
+            <h3>Cheyna Humphries</h3>
+            <img src="img/cheynaHumphriesPortrait.jpg" class="about-list-img">
+            <a href="https://www.linkedin.com/in/cheynahumphries/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p>For the past month I have been a Code Fellows student in the 201 course. I started my journey here because I
+              wanted a better career, I wanted something where I could always be progressing and learning. This industry
+              offers tons of that so I took advantage. The class has been amazing and I have learned so much along the way
+              that I have been able to implement into this project and with that I have these great team members to help
+              me along the way!</p>
+          </li>
+          <li class="margin-bot">
+            <h3>Brandon Haynes</h3>
+            <img src="img/brandonHaynesPortrait.jpg" class="about-list-img">
+            <a href="https://www.linkedin.com/in/brandonautomation/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p>I'm a kung fu master turned Air Force veteran turned software developer with a passion for languages and a knack
+              for creative problem solving. I enjoy the process of learning to understand complex systems, and then plying
+              that knowledge to impact those systems in helpful ways.</p>
+          </li>
+          <li>
+            <h3>Matthew Brown</h3>
+            <img src="img/matthewBrownPortrait.jpg" class="about-list-img">
+            <a href="https://www.linkedin.com/in/mthwbrwn/" target="_blank">
+              <img src="img/In-2C-28px-TM.png">
+            </a>
+            <p> I've had a great time working on this beginning programming site. I joined Code Fellows for a change of scenery
+              from my previous employment. I am now chasing a dream of becoming a software developer which is far more inline
+              with my love for puzzles and language learning. Please checkout our GitHub pages for additional content. </p>
+          </li>
+      </ol>
+      <hr>
+    </section>
+
+<!-- Whelping-Box to SPA -->
+
+    <section id="whelping-container" class="js-container container">
+      <h1> Here are our puppies! </h1>
+      <div id="whelping-box"></div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <section>       
+      <div class="margin-bot footer-nav">
+          <a href="/">Home</a>
+          <a href="/breeder/puppies">Whelping Box</a>
+          <a href="/breeder/puppies/new">Breeders add a puppy</a>
+          <a href="/puppies">Search Shelter Puppies</a>
+          <a href="/about">About</a>
+          <a href="/contact-us">Contact Us</a>
+          <a href="/puppies/application">Application</a>
+      </div>
+      <div class="flexed margin-bot market">
+        <img src="img/dog-316930__340_trifold.jpg">
+        <div class="github">
+          <a target="_blank" href="https://github.com/My-Dog-Spot">
+            <img src="img/Octocat.jpg" width="50px" id="github-logo" alt="an octocat Github logo"> </a>
+          <a href="https://github.com/My-Dog-Spot">
+            <h6>Click here to visit our github page</h6>
+          </a>
+        </div>
+      </div>
+      <h5> Copyright (c) 2018 My-Dog-Spot </h5>
+    </section>
   </footer>
-  <!-- <script src="https://gist.github.com/gordonbrander/2230317.js"></script> -->
-  <script src="js/dog.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.8.6/page.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/models/puppy.js"></script>
+  <script src="js/models/petfinder.js"></script>
+  <script src="js/views/puppy-view.js"></script>
+  <script src="js/views/business-view.js"></script>
+  <script src="js/views/breeder-view.js"></script>
+  <script src="js/views/application-view.js"></script>
+  <script src="js/controllers/routes.js"> </script>
 </body>
 
 </html>

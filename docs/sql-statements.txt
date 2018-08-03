@@ -1,0 +1,16 @@
+CREATE DATABASE puppy_app;
+
+CREATE TABLE puppies (puppy_id SERIAL PRIMARY KEY, name varchar(255), gender varchar(31), birthdate date, image_url varchar(255), story varchar(1023));
+
+Loads the sample data
+INSERT INTO puppies(name, gender, birthdate, image_url, story) VALUES ('Shrek', 'male', '20180519', 'img/can-u-beat-my-adorability-score.png', 'Like his namesake, he is a confident and independent, though not very green!');
+
+INSERT INTO puppies(name, gender, birthdate, image_url, story) VALUES ('Donkey', 'male', '20180519', 'img/powtee-scowtee.png', 'This one is happy, energetic, and always playful!');
+
+INSERT INTO puppies(name, gender, birthdate, image_url, story) VALUES ('Princess Fiona', 'female', '20180519', 'img/we-need-some-time-apart.png', 'She is a proper princess! She is a little standoffish, and a little unsure about her brothers. It talks!');
+
+INSERT INTO puppies(name, gender, birthdate, image_url, story) VALUES ('Hannah', 'female', '20180301', 'img/cairn-terriers-hero.jpg', 'Oh boy! She is loud and in charge! Always alert and active. What do you mean, you dont know?');
+
+INSERT INTO puppies(name, gender, birthdate, image_url, story) VALUES ('Bo Peep', 'female', '20180301', 'img/cairn-terriers-3.jpg', 'Gentle, sensitive, and nuturing towards her siblings, a lovely and sweet pup. Potato Head!');
+
+INSERT INTO puppies(name, gender, birthdate, image_url, story) VALUES ('Mrs Davis', 'female', '20180301', 'img/can-u-beat-my-adorability-score.png', 'An old soul, wise beyond her weeks. humph');
