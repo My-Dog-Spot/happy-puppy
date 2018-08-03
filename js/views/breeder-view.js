@@ -5,11 +5,10 @@ var app = app || {};
 (function(module) {
   var breederView = {};
 
-  breederView.initWhelpingPage = (ctx, next) => {
+  breederView.initWhelpingPage = (context) => {
     $('#whelping-box').empty();
     app.showOnly('#whelping-container');
-    module.Puppy.all.forEach(puppy => $('#whelping-box').append(puppy.toHtml()));
-    next();
+    module.Puppy.all.forEach(puppy => $('#whelping-box').append(puppy.toHtml('breeder-puppy-list-template')));
   };
 
   breederView.initIndexPage = () => {

@@ -22,7 +22,7 @@ page('/puppies/application'
 
 // Breeder routes
 page('/breeder/puppies'
-  , context =>  app.Puppy.fetchAll(() => app.breederView.initWhelpingPage(context, next))
+  , context =>  app.Puppy.fetchAll(() => app.breederView.initWhelpingPage(context))
 );
 
 // TYLER - This is a potential route for breeder puppy details; STRETCH GOAL
