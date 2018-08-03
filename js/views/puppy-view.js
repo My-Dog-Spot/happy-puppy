@@ -23,7 +23,7 @@ var app = app || {};
 
     puppyView.initSearchResultsPage = () => {
         $('#search-list').empty();
-        app.ShelterPuppy.all.forEach(puppy => $('#search-results').append(puppy.toHtml('breeder-puppy-list-template')));
+        app.ShelterPuppy.all.forEach(puppy => $('#search-results').append(puppy.toHtml('shelter-pet-list-template')));
 
     }
 

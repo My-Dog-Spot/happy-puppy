@@ -24,14 +24,14 @@
 
   <script id="shelter-pet-list-template" type="text/x-handlebars-template">
       <figure class="margin-lg-bot">
-        <img src="{{image_url}}" class="col-3"/>
-        <figcaption class="col-6">
+        <img src="{{image_url}}" class="col-3 shelter-img-padding"/>
+        <figcaption>
             <h2>{{name}}</h2>
             <h3>Age: {{age}} Gender: {{gender}}</h3>
             <h3>{{city}} {{state}}</h3>
             <p class="story-body margin-bot">{{story}}</p>
-          <img id="location-map" src="{{locationMap}}" alt="The google map showing the shelter or contact location">
-          </figcaption>
+            <img id="location-map" src="{{locationMap}}" alt="The google map showing the shelter or contact location"/>
+        </figcaption>
       </figure>
   </script>
 

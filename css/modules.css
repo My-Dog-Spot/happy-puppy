@@ -116,6 +116,10 @@ footer img {
         display: none;
     }
 
+    .shelter-img-padding {
+        padding: 0 2% 2% 0;
+    }
+
     .footer-nav {
         margin-bottom: 1%;
     }
