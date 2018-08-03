@@ -15,7 +15,7 @@
   <!-- Handlebars templates -->
   <script id="featured-puppy-template" type="text/x-handlebars-template">
       <figure class="col-6 padding-desk feature">
-        <img src="{{image_url}}" />
+        <img src="./{{image_url}}" />
         <figcaption>
           <h2>{{name}}</h2>
         </figcaption>
@@ -37,7 +37,7 @@
 
   <script id="breeder-puppy-list-template" type="text/x-handlebars-template">
       <figure class="clearfix margin-bot">
-        <img src="{{image_url}}" class="col-3"/>
+        <img src="../{{image_url}}" class="col-3"/>
         <figcaption class="col-6 padding-left-desk">
             <h2>{{name}}, {{gender}}</h2>
             <h3>{{birthdate}}</h3>
