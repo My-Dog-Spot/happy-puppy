@@ -3,7 +3,7 @@
 var app = app || {};
 
 (function(module) {
-  var breederView = {};
+  let breederView = {};
 
   breederView.initWhelpingPage = (context) => {
     $('#whelping-box').empty();
@@ -13,10 +13,11 @@ var app = app || {};
 
   breederView.initIndexPage = () => {
     let puppyList = app.Puppy.all;
-    $('#featured-view').empty();
+    let featuredViewElement =$('#featured-view');
+      featuredViewElement.empty();
     app.showOnly('#home');
-    for (var i = 0; i < 2; i++) {
-      $('#featured-view').append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
+    for (let i = 0; i < 2; i++) {
+        featuredViewElement.append(puppyList[Math.floor(Math.random() * puppyList.length)].toHtml('featured-puppy-template'));
     }
   };
 

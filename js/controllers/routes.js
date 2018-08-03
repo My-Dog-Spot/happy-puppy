@@ -16,6 +16,8 @@ page('/about'
 page('/contact-us'
   , context => app.businessView.initContactPage(context)
 );
+
+// TODO Future functionality
 page('/puppies/application'
   , context => app.applicationView.initPuppyAppForm(context)
 );

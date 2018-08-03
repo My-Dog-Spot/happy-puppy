@@ -3,7 +3,7 @@
 var app = app || {};
 
 (function(module) {
-    var puppyView = {};
+    let puppyView = {};
 
     puppyView.initSearchForm = () => {
         app.showOnly('#search-view');
@@ -12,12 +12,12 @@ var app = app || {};
             event.preventDefault();
 
             let puppy = {
-                location: event.target.zipcode.value || '',
+                location: event.target.postalCode.value || '',
             };
 
             module.ShelterPuppy.find(puppy.location, puppyView.initSearchResultsPage);
 
-            event.target.zipcode.value = '';
+            event.target.postalCode.value = '';
         });
     };
 
@@ -25,7 +25,7 @@ var app = app || {};
         $('#search-list').empty();
         app.ShelterPuppy.all.forEach(puppy => $('#search-results').append(puppy.toHtml('shelter-pet-list-template')));
 
-    }
+    };
 
     module.puppyView = puppyView;
 })(app);
