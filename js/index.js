@@ -9,7 +9,7 @@
  * but app outside. Then, app becomes a shared object by all the js files. The different names help to
  * make the code a little more clear.
  * https://toddmotto.com/mastering-the-module-pattern/
- * Note: better, more modern approach is to use JavaScript Class
+ * Note: better, more modern approach for scope, is to use JavaScript Class.
  */
 
 var app = app || {};
@@ -26,6 +26,10 @@ var app = app || {};
     };
 
     // Initiate nav functionality
+    /**
+     * This is a JavaScript arrow function that registers an event, click, with the DOM object,
+     * having id menu, using JQuery.
+     */
     $('#menu').on('click', () => {
         const navElement = $('nav');
         if (navElement.hasClass('flexed')) {
