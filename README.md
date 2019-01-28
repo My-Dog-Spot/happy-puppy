@@ -5,6 +5,9 @@ http://codefellows.org/
 
 ### You can visit our deployed site here: https://my-dog-spot.com/
 
+This is an HTML/CSS JavaScript web client application that uses our Node.js and Express.js server side application to
+get and add puppies to an application database (PostGreSQL).
+
 ##### Image attributions 
 /docs/image-attributions/
 
