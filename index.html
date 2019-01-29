@@ -51,6 +51,13 @@
 
 <body>
   <header>
+  <!-- Flexible header/navigation design supporting desktops, and smaller screens.
+  	How it works:
+  	If the screen size gets small enough, as defined in CSS file modules.css, a rule is triggered
+  	for class 'desktop-hide', currently 600px, so that the hamburger icon is displayed.
+  	The CSS class of the nav element below is dynamically updated by JavaScript in index.js to include
+  	'flexed'. That special layout class is then used to layout those nav element children vertically.
+  -->
     <div class="header-content">
       <img class="brand-logo" src="img/dog-316930__340_trifold.jpg">
       <a class="icon-menu desktop-hide" id="menu" href="#"></a>

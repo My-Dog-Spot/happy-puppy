@@ -34,10 +34,8 @@ var app = app || {};
         const navElement = $('nav');
         if (navElement.hasClass('flexed')) {
             navElement.removeClass('flexed');
-            console.log('removed flexed from ' + navElement);
         } else {
             navElement.addClass('flexed');
-            console.log('added flexed to ' + navElement);
         }
     });
 
