@@ -5,8 +5,16 @@ http://codefellows.org/
 
 ### You can visit our deployed site here: https://my-dog-spot.com/
 
-This is an HTML/CSS JavaScript web client application that uses our Node.js and Express.js server side application to
-get and add puppies to an application database (PostGreSQL).
+This is an HTML/CSS and JavaScript web client application that uses our Node.js and Express.js server side application to
+manage puppies in an application database (PostGreSQL).
+
+The server code is deployed to Heroku, which also hosts the application database.
+
+The client site is hosted via github, which is done through this repository.
+
+It is configured to use our public domain name registered with namecheap.com.
+
+The web client is a mobile first single page application.
 
 ##### Image attributions 
 /docs/image-attributions/
